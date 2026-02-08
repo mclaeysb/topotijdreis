@@ -1,0 +1,261 @@
+layers:
+  - name: "OSM.org"
+    url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    maxZoom: 19
+    type: "osm"
+
+  - name: "OSM Belgium"
+    url: "https://tile.osm.be/osmbe/{z}/{x}/{y}.png"
+    attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,  <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://champs-libres.coop/">Champs-Libres</a>'
+    maxZoom: 18
+    type: "osm"
+
+  - name: "OSM Belgium (FR)"
+    url: "https://tile.osm.be/osmbe-fr/{z}/{x}/{y}.png"
+    attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://champs-libres.coop/">Champs-Libres</a>'
+    maxZoom: 18
+    type: "osm"
+
+  - name: "OSM Belgium (NL)"
+    url: "https://tile.osm.be/osmbe-nl/{z}/{x}/{y}.png"
+    attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://champs-libres.coop/">Champs-Libres</a>'
+    maxZoom: 18
+    type: "osm"
+
+  - name: "OSM Belgium Archive - March 2019"
+    url: "https://tile.osm.be/archive/201903/{z}/{x}/{y}.png"
+    attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>'
+    maxZoom: 18
+    type: "osm"
+    year: 2019
+
+  - name: "OSM Belgium Archive - November 2020"
+    url: "https://tile.osm.be/archive/202011/{z}/{x}/{y}.png"
+    attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>'
+    maxZoom: 18
+    type: "osm"
+    year: 2020
+
+  - name: "OSM Belgium Archive - January 2022"
+    url: "https://tile.osm.be/archive/202201/{z}/{x}/{y}.png"
+    attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>'
+    maxZoom: 18
+    type: "osm"
+    year: 2022
+
+  - name: "Most recent aerial imagery (FL)"
+    url: "https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
+    attribution: "Luchtfoto © Digitaal Vlaanderen"
+    maxZoom: 21
+    type: "aerial"
+
+  - name: "High res winter aerial imagery (FL, 2013-2015)"
+    url: "https://geo.api.vlaanderen.be/OGW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=ogwrgb13_15vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+    attribution: "Luchtfoto © Digitaal Vlaanderen"
+    maxZoom: 21
+    type: "aerial"
+    year: 2015
+
+  - name: "GRB basemap (FL)"
+    url: "https://geo.api.vlaanderen.be/GRB/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=grb_bsk&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
+    attribution: "GRB © Digitaal Vlaanderen"
+    maxZoom: 21
+    type: "topo"
+
+  - name: "SPW Hillshade (WAL, 2021-2022)"
+    url: "https://geoservices.wallonie.be/arcgis/services/RELIEF/WALLONIE_MNT_2021_2022_HILLSHADE/MapServer/WMSServer?"
+    format: "image/png"
+    layers: "0"
+    transparent: false
+    attribution: "SPW"
+    type: "hillshade"
+    year: 2022
+
+  - name: "AIV Hillshade (strong, FL, 2013-2015)"
+    url: "https://geo.api.vlaanderen.be/DHMV/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_SVF_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
+    attribution: "DHM SVF © Digitaal Vlaanderen"
+    type: "hillshade"
+    year: 2015
+
+  - name: "AIV Hillshade (soft, FL, 2013-2015)"
+    url: "https://geo.api.vlaanderen.be/DHMV/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_HILL_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
+    attribution: "DHM SVF © Digitaal Vlaanderen"
+    type: "hillshade"
+    year: 2015
+
+  - name: "NGI ortho 1947-1954"
+    url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1947-1954/MapServer/tile/{z}/{y}/{x}"
+    attribution: '<a href="http://www.ngi.be/">NGI</a>'
+    type: "aerial"
+    year: 1954
+
+  - name: "NGI ortho 1969-1979"
+    url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1969-1979/MapServer/tile/{z}/{y}/{x}"
+    attribution: '<a href="http://www.ngi.be/">NGI</a>'
+    type: "aerial"
+    year: 1979
+
+  - name: "NGI ortho 1995"
+    url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1995/MapServer/tile/{z}/{y}/{x}"
+    attribution: '<a href="http://www.ngi.be/">NGI</a>'
+    type: "aerial"
+    year: 1995
+
+  - name: "Masse, Westhoek only (1729)"
+    url: "https://geo.api.vlaanderen.be/histcart/wms?"
+    format: "image/png"
+    layers: "Masse"
+    transparent: false
+    attribution: "Tiles provided by Digitaal Vlaanderen"
+    type: "topo"
+    year: 1729
+
+  - name: "Frickx (1712, VL)"
+    url: "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=frickx&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
+    attribution: "Tiles provided by Digitaal Vlaanderen"
+    type: "topo"
+    year: 1712
+
+  - name: "Villaret (1745, VL)"
+    url: "https://geo.api.vlaanderen.be/histcart/wms?"
+    format: "image/png"
+    layers: "Villaret"
+    transparent: false
+    attribution: "Tiles provided by Digitaal Vlaanderen"
+    type: "topo"
+    year: 1745
+
+  - name: "Ferraris (1777, VL)"
+    url: "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ferraris&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
+    attribution: "Tiles provided by Digitaal Vlaanderen"
+    type: "topo"
+    year: 1777
+
+  - name: "Ferraris (1777, WAL)"
+    url: "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/FERRARIS/MapServer/WMSServer?"
+    format: "image/png"
+    layers: "0"
+    transparent: false
+    attribution: "SPW"
+    type: "topo"
+    year: 1777
+
+  - name: "Forêt de Soignes (1661, WAL)"
+    url: "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/SOIGNES_VANDERSTOCK_1661/MapServer/WMSServer?"
+    format: "image/png"
+    layers: "0"
+    transparent: false
+    attribution: "SPW"
+    type: "topo"
+    year: 1661
+
+  - name: "Atlas der Buurtwegen (1840, FL)"
+    url: "https://geo.api.vlaanderen.be/histcart/wms?"
+    format: "image/png"
+    layers: "abw"
+    transparent: false
+    attribution: "Tiles provided by Digitaal Vlaanderen"
+    type: "topo"
+    year: 1840
+
+  - name: "Atlas des voiries vicinales (1841, WAL)"
+    url: "https://geoservices.wallonie.be/arcgis/services/PLAN_REGLEMENT/ATLAS_VV_MODIF/MapServer/WMSServer?"
+    format: "image/png"
+    layers: "0,3"
+    transparent: false
+    attribution: "SPW"
+    type: "topo"
+    year: 1841
+
+  - name: "Vandermaelen (1846-1854, FL)"
+    url: "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vandermaelen&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
+    attribution: "Tiles provided by Digitaal Vlaanderen"
+    type: "topo"
+    year: 1854
+
+  - name: "Vandermaelen (1846-1854, WAL)"
+    url: "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/VDML/MapServer/WMSServer?"
+    format: "image/png"
+    layers: "0"
+    transparent: false
+    attribution: "SPW"
+    type: "topo"
+    year: 1854
+
+  - name: "Popp (1842-1854, FL)"
+    url: "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=popp&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
+    attribution: "Tiles provided by Digitaal Vlaanderen"
+    type: "topo"
+    year: 1854
+
+  - name: "Carte du dépôt de la guerre (1865 - 1880, WAL)"
+    url: "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/DEPOT_GUERRE_1865_1880/MapServer/WMSServer?"
+    format: "image/png"
+    layers: "0"
+    transparent: false
+    attribution: "SPW"
+    type: "topo"
+    year: 1880
+
+  - name: "NGI Basemap 1873"
+    url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__140/MapServer/tile/{z}/{y}/{x}"
+    attribution: '<a href="http://www.ngi.be/">NGI</a>'
+    type: "topo"
+    year: 1873
+
+  - name: "NGI Basemap 1904"
+    url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__450/MapServer/tile/{z}/{y}/{x}"
+    attribution: '<a href="http://www.ngi.be/">NGI</a>'
+    type: "topo"
+    year: 1904
+
+  - name: "NGI Basemap 1939"
+    url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__800/MapServer/tile/{z}/{y}/{x}"
+    attribution: '<a href="http://www.ngi.be/">NGI</a>'
+    type: "topo"
+    year: 1939
+
+  - name: "Ministerie Openbare Werken (1950-1970, FL)"
+    url: "https://geoserver.gis.cloud.mow.vlaanderen.be/geoserver/wms?"
+    attribution: '<a href="https://www.vlaanderen.be/datavindplaats/catalogus/topografische-kaarten-ministerie-van-openbare-werken-en-wederopbouw-opname-1950-1970">MOWW</a>'
+    format: "image/png"
+    layers: "ato:topokaarten"
+    transparent: false
+    type: "topo"
+    year: 1970
+
+  - name: "Plans du Ministère des Travaux publics (1950-1973, WAL)"
+    url: "https://geoservices.wallonie.be/arcgis/services/TOPOGRAPHIE/PLANS_TRAVAUXPUBLICS_1950_1973/MapServer/WMSServer?"
+    format: "image/png"
+    layers: "0,1"
+    transparent: false
+    attribution: "SPW"
+    type: "topo"
+    year: 1973
+
+  - name: "NGI Basemap 1969"
+    url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__1100/MapServer/tile/{z}/{y}/{x}"
+    attribution: '<a href="http://www.ngi.be/">NGI</a>'
+    type: "topo"
+    year: 1969
+
+  - name: "NGI Basemap 1981"
+    url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__1220/MapServer/tile/{z}/{y}/{x}"
+    attribution: '<a href="http://www.ngi.be/">NGI</a>'
+    type: "topo"
+    year: 1981
+
+  - name: "NGI Basemap 1989"
+    url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__1300/MapServer/tile/{z}/{y}/{x}"
+    attribution: '<a href="http://www.ngi.be/">NGI</a>'
+    type: "topo"
+    year: 1989
+
+  - name: "Most recent NGI Basemap"
+    url: "https://wms.ngi.be/inspire/topomaps/service?"
+    format: "image/png"
+    layers: "top25map"
+    transparent: false
+    attribution: '<a href="http://www.ngi.be/">NGI</a>'
+    type: "topo"
