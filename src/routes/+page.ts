@@ -1,17 +1,9 @@
 import layers from '$lib/content/layers.yml';
 
+import type { RawLayer } from '$lib/types/types';
+
 export function load() {
 	return {
-		layers: layers.layers as Array<{
-			name: string;
-			url: string;
-			attribution: string;
-			type: string;
-			year?: number;
-			format?: string;
-			layers?: string;
-			transparent?: boolean;
-			maxZoom?: number;
-		}>
+		layers: layers as RawLayer[]
 	};
 }
