@@ -1,24 +1,15 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import maplibregl from 'maplibre-gl';
-	import type { Layer } from '$lib/types/types';
 
-	let { selectedYear, selectedLayers }: { selectedYear: number; selectedLayers: Layer[] } =
+	import type { SortedLayer } from '$lib/types/types';
+
+	let { allLayers, visibleLayerNames }: { allLayers: SortedLayer[]; visibleLayerNames: string[] } =
 		$props();
 
 	let container: HTMLElement;
 	let map: maplibregl.Map; // TODO: make readable?
 	let mapStyleLoaded = $state(false);
-
-	let visibleLayers: Layer[] = $derived(
-		selectedLayers.filter(
-			(layer) =>
-				selectedYear >= layer.year && (layer.nextYear ? selectedYear < layer.nextYear : true)
-		)
-	);
-	let visibleLayerNames: string[] = $derived(visibleLayers.map((layer) => layer.name));
-
-	$inspect(visibleLayerNames);
 
 	onMount(() => {
 		map = new maplibregl.Map({
@@ -27,12 +18,12 @@
 			style: {
 				version: 8,
 				sources: Object.fromEntries(
-					selectedLayers.map((layer) => [
+					allLayers.map((layer) => [
 						layer.name,
 						{ type: 'raster', tiles: [layer.url], tileSize: 256 }
 					])
 				),
-				layers: selectedLayers.map((layer) => {
+				layers: allLayers.map((layer) => {
 					return {
 						id: layer.name,
 						type: 'raster',
@@ -78,7 +69,7 @@
 
 	$effect(() => {
 		if (mapStyleLoaded) {
-			for (const layer of selectedLayers) {
+			for (const layer of allLayers) {
 				map.setLayoutProperty(
 					layer.name,
 					'visibility',
@@ -89,4 +80,4 @@
 	});
 </script>
 
-<div class="h-full w-full" bind:this={container}></div>
+<div class=" h-full w-full" bind:this={container}></div>

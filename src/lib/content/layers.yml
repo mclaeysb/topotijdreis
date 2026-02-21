@@ -1,299 +1,522 @@
 - name: "OSM.org"
+  description: "OSM"
   url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-  attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  urlType: "XYZ"
+  attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
   maxZoom: 19
   type: "osm"
+  coverage: "belgium"
 
 - name: "OSM Belgium"
+  description: "OSM Belgium"
   url: "https://tile.osm.be/osmbe/{z}/{x}/{y}.png"
-  attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,  <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://champs-libres.coop/">Champs-Libres</a>'
+  urlType: "XYZ"
+  attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a> contributors,  <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://champs-libres.coop/">Champs-Libres</a>'
   maxZoom: 18
   type: "osm"
+  coverage: "belgium"
 
 - name: "OSM Belgium (FR)"
+  description: "OSM Belgium (FR)"
   url: "https://tile.osm.be/osmbe-fr/{z}/{x}/{y}.png"
-  attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://champs-libres.coop/">Champs-Libres</a>'
+  urlType: "XYZ"
+  attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://champs-libres.coop/">Champs-Libres</a>'
   maxZoom: 18
   type: "osm"
+  coverage: "belgium"
 
 - name: "OSM Belgium (NL)"
+  description: "OSM Belgium (NL)"
   url: "https://tile.osm.be/osmbe-nl/{z}/{x}/{y}.png"
-  attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://champs-libres.coop/">Champs-Libres</a>'
+  urlType: "XYZ"
+  attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://champs-libres.coop/">Champs-Libres</a>'
   maxZoom: 18
   type: "osm"
+  coverage: "belgium"
 
 - name: "OSM Belgium Archive - March 2019"
+  description: "OSM Belgium Archive"
   url: "https://tile.osm.be/archive/201903/{z}/{x}/{y}.png"
-  attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>'
+  urlType: "XYZ"
+  attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>'
   maxZoom: 18
   type: "osm"
   year: 2019
+  coverage: "belgium"
 
 - name: "OSM Belgium Archive - November 2020"
+  description: "OSM Belgium Archive"
   url: "https://tile.osm.be/archive/202011/{z}/{x}/{y}.png"
-  attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>'
+  urlType: "XYZ"
+  attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>'
   maxZoom: 18
   type: "osm"
   year: 2020
+  coverage: "belgium"
 
 - name: "OSM Belgium Archive - January 2022"
+  description: "OSM Belgium Archive"
   url: "https://tile.osm.be/archive/202201/{z}/{x}/{y}.png"
-  attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>'
+  urlType: "XYZ"
+  attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>'
   maxZoom: 18
   type: "osm"
   year: 2022
+  coverage: "belgium"
 
-- name: "Most recent aerial imagery (FL)"
-  url: "https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
-  attribution: "Luchtfoto © Digitaal Vlaanderen"
-  maxZoom: 21
+- name: "Ortho (1971, VL)"
+  description: "Orthophoto"
+  url: "https://geo.api.vlaanderen.be/OKZ/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=okzpan71vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/0038bab3-d375-4000-9ee5-8f973385e462"
   type: "aerial"
+  year: 1971
+  coverage: "flanders"
+
+- name: "Ortho (2000-2003, VL)"
+  description: "Orthophoto"
+  url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb00_03vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/ded85fcf-bf6e-497c-8a89-4896762e04ad"
+  type: "aerial"
+  yearStart: 2000
+  year: 2003
+  coverage: "flanders"
+
+- name: "Ortho (2005-2007, VL)"
+  description: "Orthophoto"
+  url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb05_07vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/dbf9ede8-97ce-4dd9-93e6-8a5baeba1fa7"
+  type: "aerial"
+  yearStart: 2005
+  year: 2007
+  coverage: "flanders"
+
+- name: "Ortho (2008-2011, VL)"
+  description: "Orthophoto"
+  url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb08_11vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/68e01569-5d34-42c5-9212-350b45283fa2"
+  type: "aerial"
+  yearStart: 2008
+  year: 2011
+  coverage: "flanders"
+
+- name: "Ortho (2012, VL)"
+  description: "Orthophoto"
+  url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb12vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/e2a4923f-3547-4e0a-8016-38c489f106f3"
+  type: "aerial"
+  year: 2012
+  coverage: "flanders"
 
 - name: "High res winter aerial imagery (FL, 2013-2015)"
+  description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OGW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=ogwrgb13_15vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  urlType: "WMTS"
   attribution: "Luchtfoto © Digitaal Vlaanderen"
   maxZoom: 21
   type: "aerial"
+  yearStart: 2013
   year: 2015
+  coverage: "flanders"
+
+- name: "Ortho (2024, VL)"
+  description: "Orthophoto"
+  url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb24vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/72ecb198-84d1-4015-82c2-8e10a3c16cdf"
+  type: "aerial"
+  year: 2024
+  coverage: "flanders"
+
+- name: "Ortho (2025, VL)"
+  description: "Orthophoto"
+  url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb25vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/088a9e65-83c7-4154-8078-ac2309bf41a2"
+  type: "aerial"
+  year: 2025
+  coverage: "flanders"
+
+- name: "Most recent aerial imagery (FL)"
+  description: "Orthophoto"
+  url: "https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
+  urlType: "WMTS"
+  attribution: "Luchtfoto © Digitaal Vlaanderen"
+  maxZoom: 21
+  type: "aerial"
+  include: false
+  coverage: "flanders"
 
 - name: "GRB basemap (FL)"
+  description: "GRB"
   url: "https://geo.api.vlaanderen.be/GRB/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=grb_bsk&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
+  urlType: "WMTS"
   attribution: "GRB © Digitaal Vlaanderen"
   maxZoom: 21
   type: "topo"
   include: false
+  coverage: "flanders"
 
 - name: "SPW Hillshade (WAL, 2021-2022)"
+  description: "Hillshade"
   url: "https://geoservices.wallonie.be/arcgis/services/RELIEF/WALLONIE_MNT_2021_2022_HILLSHADE/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
+  urlType: "WMS"
   format: "image/png"
   layers: "0"
   covering: false
-  attribution: "SPW"
+  attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
   type: "hillshade"
+  yearStart: 2021
   year: 2022
+  coverage: "wallonia"
 
 - name: "AIV Hillshade (strong, FL, 2013-2015)"
+  description: "Hillshade"
   url: "https://geo.api.vlaanderen.be/DHMV/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_SVF_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
-  attribution: "DHM SVF © Digitaal Vlaanderen"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
   type: "hillshade"
+  yearStart: 2013
   year: 2015
+  coverage: "flanders"
 
 - name: "AIV Hillshade (soft, FL, 2013-2015)"
+  description: "Hillshade"
   url: "https://geo.api.vlaanderen.be/DHMV/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_HILL_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
-  attribution: "DHM SVF © Digitaal Vlaanderen"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
   type: "hillshade"
+  yearStart: 2013
   year: 2015
   include: false
+  coverage: "flanders"
 
 - name: "NGI ortho 1947-1954"
+  description: "Orthophoto"
   url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1947-1954/MapServer/tile/{z}/{y}/{x}"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "aerial"
+  yearStart: 1947
   year: 1954
+  coverage: "belgium"
 
 - name: "NGI ortho 1969-1979"
+  description: "Orthophoto"
   url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1969-1979/MapServer/tile/{z}/{y}/{x}"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "aerial"
+  yearStart: 1969
   year: 1979
+  coverage: "belgium"
 
 - name: "NGI ortho 1995"
+  description: "Orthophoto"
   url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1995/MapServer/tile/{z}/{y}/{x}"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "aerial"
   year: 1995
+  coverage: "belgium"
 
 - name: "NGI ortho 2016"
+  description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2016/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "aerial"
   year: 2016
+  coverage: "belgium"
 
 - name: "NGI ortho 2017"
+  description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2017/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "aerial"
   year: 2017
+  coverage: "belgium"
 
 - name: "NGI ortho 2019"
+  description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2019/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "aerial"
   year: 2019
+  coverage: "belgium"
 
 - name: "NGI ortho 2020"
+  description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2020/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "aerial"
   year: 2022
+  coverage: "belgium"
 
 - name: "NGI ortho 2021"
+  description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2021/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "aerial"
   year: 2021
+  coverage: "belgium"
 
 - name: "NGI ortho 2022"
+  description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2022/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "aerial"
   year: 2022
+  coverage: "belgium"
 
 - name: "NGI ortho 2023"
+  description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "aerial"
+  year: 2023
+  coverage: "belgium"
 
 - name: "Masse, Westhoek only (1729)"
+  description: "Masse"
   url: "https://geo.api.vlaanderen.be/histcart/wms?&service=WMS&request=GetMap&layers=Masse&styles=&format=image%2Fpng&transparent=true&version=1.1.1&width=256&height=256&srs=EPSG%3A3857&bbox={bbox-epsg-3857}"
+  urlType: "WMS"
   layers: "Masse"
   covering: false
-  attribution: "Tiles provided by Digitaal Vlaanderen"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
   type: "topo"
   year: 1729
   include: false
+  coverage: "partial"
 
 - name: "Frickx (1712, VL)"
+  description: "Frickx"
   url: "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=frickx&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
-  attribution: "Tiles provided by Digitaal Vlaanderen"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
   type: "topo"
   year: 1712
   include: false
+  coverage: "partial"
 
 - name: "Villaret (1745, VL)"
+  description: "Villaret"
   url: "https://geo.api.vlaanderen.be/histcart/wms?&service=WMS&request=GetMap&layers=Villaret&styles=&format=image%2Fpng&transparent=true&version=1.1.1&width=256&height=256&srs=EPSG%3A3857&bbox={bbox-epsg-3857}"
+  urlType: "WMS"
   covering: false
-  attribution: "Tiles provided by Digitaal Vlaanderen"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
   type: "topo"
   year: 1745
   include: false
+  coverage: "partial"
 
 - name: "Ferraris (1777, VL)"
+  description: "Ferraris"
   url: "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ferraris&STYLE=&FORMAT=image/png&transparent=true&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
-  attribution: "Tiles provided by Digitaal Vlaanderen"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/2d7382ea-d25c-4fe5-9196-b7ebf2dbe352"
   type: "topo"
   year: 1777
-
-- name: "Ortho (1971, VL)"
-  url: "https://geo.api.vlaanderen.be/OKZ/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=okzpan71vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
-  attribution: "Tiles provided by Digitaal Vlaanderen"
-  type: "aerial"
-  year: 1971
+  coverage: "flanders"
 
 - name: "Ferraris (1777, WAL)"
+  description: "Ferraris"
   url: "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/FERRARIS/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
+  urlType: "WMS"
   covering: false
-  attribution: "SPW"
+  attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
   type: "topo"
   year: 1777
+  coverage: "wallonia"
 
 - name: "Forêt de Soignes (1661, WAL)"
+  description: "Forêt de Soignes"
   url: "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/SOIGNES_VANDERSTOCK_1661/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
+  urlType: "WMS"
   covering: false
-  attribution: "SPW"
+  attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
   type: "topo"
   year: 1661
   include: false
+  coverage: "partial"
 
 - name: "Atlas der Buurtwegen (1840, FL)"
+  description: "Atlas der Buurtwegen"
   url: "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=abw&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  urlType: "WMTS"
   format: "image/png"
   covering: false
-  attribution: "Tiles provided by Digitaal Vlaanderen"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
   type: "topo"
   year: 1840
+  coverage: "flanders"
 
 - name: "Atlas des voiries vicinales (1840, WAL)"
+  description: "Atlas des voiries vicinales"
   url: "https://geoservices.wallonie.be/arcgis/services/PLAN_REGLEMENT/ATLAS_VV_MODIF/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0,3&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
+  urlType: "WMS"
   covering: false
-  attribution: "SPW"
+  attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
   type: "topo"
   year: 1840
+  coverage: "wallonia"
 
 - name: "Vandermaelen (1846-1854, FL)"
+  description: "Vandermaelen"
   url: "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vandermaelen&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
-  attribution: "Tiles provided by Digitaal Vlaanderen"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
   type: "topo"
+  yearStart: 1846
   year: 1854
+  coverage: "flanders"
 
 - name: "Vandermaelen (1846-1854, WAL)"
+  description: "Vandermaelen"
   url: "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/VDML/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
+  urlType: "WMS"
   covering: false
-  attribution: "SPW"
+  attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
   type: "topo"
+  yearStart: 1846
   year: 1854
+  # include: false
+  coverage: "wallonia"
 
 - name: "Popp (1842-1854, FL)"
+  description: "Popp"
   url: "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=popp&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
-  attribution: "Tiles provided by Digitaal Vlaanderen"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
   type: "topo"
+  yearStart: 1842
   year: 1854
+  include: false
+  coverage: "flanders"
 
 - name: "Carte du dépôt de la guerre (1865 - 1880, WAL)"
+  description: "Carte du dépôt de la guerre"
   url: "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/DEPOT_GUERRE_1865_1880/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
+  urlType: "WMS"
   covering: false
-  attribution: "SPW"
+  attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
   type: "topo"
+  yearStart: 1865
   year: 1880
   include: false
+  coverage: "wallonia"
 
 - name: "NGI Basemap 1873"
+  description: "TOP25"
   url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__140/MapServer/tile/{z}/{y}/{x}"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "topo"
   year: 1873
+  coverage: "belgium"
 
 - name: "NGI Basemap 1904"
+  description: "TOP25"
   url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__450/MapServer/tile/{z}/{y}/{x}"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "topo"
   year: 1904
+  coverage: "belgium"
 
 - name: "NGI Basemap 1939"
+  description: "TOP25"
   url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__800/MapServer/tile/{z}/{y}/{x}"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
   type: "topo"
   year: 1939
+  coverage: "belgium"
 
 - name: "Ministerie Openbare Werken (1950-1970, FL)"
-  # url: "https://geoserver.gis.cloud.mow.vlaanderen.be/geoserver/wms?"
+  description: "Ministerie Openbare Werken"
   url: "https://geoserver.gis.cloud.mow.vlaanderen.be/geoserver/wms?&service=WMS&request=GetMap&layers=ato%3Atopokaarten&styles=&format=image%2Fpng&transparent=true&version=1.1.1&width=256&height=256&srs=EPSG%3A3857&bbox={bbox-epsg-3857}"
+  urlType: "WMS"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats/catalogus/topografische-kaarten-ministerie-van-openbare-werken-en-wederopbouw-opname-1950-1970">MOWW</a>'
   # transparent: true
   type: "topo"
+  yearStart: 1950
   year: 1970
+  include: false
+  coverage: "flanders"
 
 - name: "Plans du Ministère des Travaux publics (1950-1973, WAL)"
+  description: "Plans du Ministère des Travaux publics"
   url: "https://geoservices.wallonie.be/arcgis/services/TOPOGRAPHIE/PLANS_TRAVAUXPUBLICS_1950_1973/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0,1&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
+  urlType: "WMS"
   format: "image/png"
   layers: "0,1"
   covering: false
-  attribution: "SPW"
+  attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
   type: "topo"
+  yearStart: 1950
   year: 1973
   include: false
+  coverage: "wallonia"
 
-- name: "NGI Basemap 1969"
+- name: "NGI Basemap 1949-1967"
+  description: "TOP25"
   url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__1100/MapServer/tile/{z}/{y}/{x}"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/historische-kaarten/topografische-kaarten-op-schaal-125-000-1949-1988/"
   type: "topo"
-  year: 1969
+  yearStart: 1949
+  year: 1967
+  coverage: "belgium"
 
-- name: "NGI Basemap 1981"
+- name: "NGI Basemap 1969-1985"
+  description: "TOP25"
   url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__1220/MapServer/tile/{z}/{y}/{x}"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/historische-kaarten/topografische-kaarten-op-schaal-125-000-1949-1988/"
   type: "topo"
-  year: 1981
+  yearStart: 1969
+  year: 1985
+  coverage: "belgium"
 
-- name: "NGI Basemap 1989"
+- name: "NGI Basemap 1981-1989"
+  description: "TOP25"
   url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__1300/MapServer/tile/{z}/{y}/{x}"
+  urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/historische-kaarten/topografische-kaarten-op-schaal-125-000-1949-1988/"
   type: "topo"
+  yearStart: 1981
   year: 1989
+  coverage: "belgium"
 
-- name: "NGI Basemap 2015-2022"
-  # url: "https://wms.ngi.be/inspire/topomaps/service?service=WMS&request=GetMap&version=1.1.1&layers=top25map&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
-  url: "https://cartoweb.wmts.ngi.be/1.0.0/topo/default/3857/{z}/{y}/{x}.png"
+- name: "NGI Basemap 2016"
+  description: "TOP25"
+  url: "https://wms.ngi.be/inspire/topomaps/service?service=WMS&request=GetMap&version=1.1.1&layers=top25map&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
+  # url: "https://cartoweb.wmts.ngi.be/1.0.0/topo/default/3857/{z}/{y}/{x}.png"
+  urlType: "WMS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/95cfdd8f-808e-11e9-a3ad-482ae30f98d9?l=nl"
   type: "topo"
-  year: 2022
+  year: 2016
+  coverage: "belgium"
