@@ -6,9 +6,11 @@
 	import type { Type } from '$lib/types/types';
 
 	let {
-		selectedTypes = $bindable()
+		selectedTypes = $bindable(),
+		compare = $bindable()
 	}: {
 		selectedTypes: Type[];
+		compare: boolean;
 	} = $props();
 </script>
 
@@ -21,7 +23,14 @@
 			<!-- <Input placeholder="Go to location" class="mr-2 w-60"></Input> -->
 			<Button variant="default" class="bg-stone-800"
 				><Columns2 />
-				<div class="hidden md:flex">Compare</div></Button
+				<div
+					class="hidden md:flex"
+					onclick={() => {
+						compare = !compare;
+					}}
+				>
+					Compare
+				</div></Button
 			>
 			<Button variant="outline" class="ml-2"
 				><LocateFixed />

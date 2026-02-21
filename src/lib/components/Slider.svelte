@@ -31,14 +31,14 @@
 	>
 		{#snippet children({ tickItems })}
 			<span
-				class="absolute hidden h-full w-full cursor-pointer overflow-hidden border-r border-stone-900 bg-stone-800 transition md:flex"
+				class="absolute z-5 hidden h-full w-full cursor-pointer overflow-hidden border-r border-stone-900 bg-stone-800 transition md:flex"
 			>
 				<Slider.Range class="absolute w-full bg-stone-800" />
 			</span>
 
 			<Slider.Thumb
 				index={0}
-				class="border-grey-700 justify left-0 z-10 flex h-9	 w-21 cursor-pointer items-center rounded-r-sm border border-l-0 bg-white shadow-lg focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 "
+				class="border-grey-700 justify left-0 z-20 flex h-9	 w-21 cursor-pointer items-center rounded-r-sm border border-l-0 bg-white shadow-lg focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 "
 			>
 				<!-- hover:scale-110 -->
 				<span class="ml-2 flex items-center text-xl font-bold text-stone-700">
@@ -49,13 +49,13 @@
 
 			{#each tickItems as { index, value } (index)}
 				{#if value % 5 === 0}
-					<Slider.Tick {index} class="z-5 ml-2 hidden h-0.5 w-1 bg-stone-400 transition md:flex" />
+					<Slider.Tick {index} class="z-10 ml-2 hidden h-0.5 w-1 bg-stone-400 transition md:flex" />
 				{/if}
 				{#if value % 25 === 0 || value === earliestYear}
 					<Slider.TickLabel
 						{index}
 						position="right"
-						class="-ml-11 hidden text-xs leading-none font-medium text-stone-200 transition md:flex"
+						class="z-5 -ml-11 hidden text-xs leading-none font-medium text-stone-200 transition md:flex"
 					>
 						{value}
 					</Slider.TickLabel>
@@ -65,13 +65,13 @@
 				{#if selectedYears.includes(value)}
 					<Slider.Tick
 						{index}
-						class="-left-0.5 z-5 ml-2 hidden h-2 w-2 rounded-2xl bg-stone-300 transition md:flex"
+						class="-left-0.5 z-10 ml-2 hidden h-2 w-2 rounded-2xl bg-stone-300 transition md:flex"
 					/>
 				{/if}
 			{/each}
 			<!-- {#each tickItems as { index, value } (index)}
 				{#if selectedYears.includes(value)}
-					<Slider.Tick {index} class="z-5 ml-2 h-1 w-1 rounded-2xl bg-stone-600" />
+					<Slider.Tick {index} class="z-10 ml-2 h-1 w-1 rounded-2xl bg-stone-600" />
 				{/if}
 			{/each} -->
 		{/snippet}

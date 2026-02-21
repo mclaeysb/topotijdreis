@@ -2,14 +2,28 @@
 	import { onMount, onDestroy } from 'svelte';
 	import maplibregl from 'maplibre-gl';
 
-	import type { SortedLayer } from '$lib/types/types';
+	import type { Camera, SortedLayer } from '$lib/types/types';
 
-	let { allLayers, visibleLayerNames }: { allLayers: SortedLayer[]; visibleLayerNames: string[] } =
-		$props();
+	let {
+		allLayers,
+		visibleLayerNames,
+		id,
+		camera = null,
+		leaderId,
+		onCameraChange
+	}: {
+		allLayers: SortedLayer[];
+		visibleLayerNames: string[];
+		id: string | null;
+		camera: Camera | null;
+		leaderId: string | null;
+		onCameraChange: (id: string | null, camera: Camera) => void;
+	} = $props();
 
 	let container: HTMLElement;
 	let map: maplibregl.Map; // TODO: make readable?
 	let mapStyleLoaded = $state(false);
+	let initialized = $state(false);
 
 	onMount(() => {
 		map = new maplibregl.Map({
@@ -48,6 +62,16 @@
 			mapStyleLoaded = true;
 		});
 
+		map.on('move', () => {
+			if (!map.isMoving()) return;
+			onCameraChange(id, {
+				center: map.getCenter().toArray(),
+				zoom: map.getZoom(),
+				bearing: map.getBearing(),
+				pitch: map.getPitch()
+			});
+		});
+
 		// map.addControl(new maplibregl.NavigationControl(), 'top-right');
 		// map.addControl(
 		// 	new maplibregl.GeolocateControl({
@@ -61,6 +85,8 @@
 
 		// Ensure correct sizing if layout changes or initial size wasn't computed yet
 		requestAnimationFrame(() => map.resize());
+
+		initialized = true;
 	});
 
 	onDestroy(() => {
@@ -77,6 +103,19 @@
 				);
 			}
 		}
+	});
+
+	$effect(() => {
+		if (!map || leaderId === id || camera == null || !initialized) return;
+
+		console.log(camera);
+
+		// map.jumpTo({
+		// 	center: camera.center as [number, number],
+		// 	zoom: camera.zoom,
+		// 	bearing: camera.bearing,
+		// 	pitch: camera.pitch
+		// });
 	});
 </script>
 

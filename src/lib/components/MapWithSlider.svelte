@@ -1,20 +1,27 @@
 <script lang="ts">
-	import LayerInfo from '$lib/components/LayerInfo.svelte';
 	import Map from '$lib/components/Map.svelte';
 	import YearSlider from '$lib/components/Slider.svelte';
+	import LayersInfo from '$lib/components/LayersInfo.svelte';
 
-	import type { Layer, SortedLayer, Type } from '$lib/types/types';
-	import LayersInfo from './LayersInfo.svelte';
+	import type { Camera, Layer, SortedLayer, Type } from '$lib/types/types';
 
 	let selectedYear: number = $state(1971);
 	let currentYear = new Date().getFullYear();
 
 	let {
 		allLayers,
-		selectedTypes
+		selectedTypes,
+		id,
+		camera,
+		leaderId,
+		onCameraChange
 	}: {
 		allLayers: SortedLayer[];
 		selectedTypes: Type[];
+		id: string | null;
+		camera: Camera;
+		leaderId: string | null;
+		onCameraChange: (id: string | null, camera: Camera) => void;
 	} = $props();
 
 	let selectedLayers: Layer[] = $derived(
@@ -55,7 +62,18 @@
 	let visibleLayerNames: string[] = $derived(visibleLayers.map((layer) => layer.name));
 </script>
 
-<div class="flex h-full w-full">
+<div class="relative flex min-h-0 min-w-0 flex-1 flex-row">
+	<div class="absolute top-0 left-0 h-full w-20">
+		<YearSlider bind:selectedYear {selectedLayers} {earliestYear} {latestYear} />
+	</div>
+
+	<div class="relative flex min-h-0 min-w-0 flex-1">
+		<LayersInfo {visibleLayers} />
+		<Map {allLayers} {visibleLayerNames} {id} {camera} {leaderId} {onCameraChange} />
+	</div>
+</div>
+
+<!-- <div class="flex h-full w-full">
 	<aside class="h-full w-0 shadow-md md:w-20">
 		<YearSlider bind:selectedYear {selectedLayers} {earliestYear} {latestYear} />
 	</aside>
@@ -64,4 +82,4 @@
 		<LayersInfo {visibleLayers}></LayersInfo>
 		<Map {allLayers} {visibleLayerNames} />
 	</main>
-</div>
+</div> -->

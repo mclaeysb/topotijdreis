@@ -26,3 +26,10 @@ export type Layer = SortedLayer & {
 	previousYear: number;
 	nextYear: number;
 };
+
+export type Camera = {
+	center: number[];
+	zoom: number;
+	bearing: number;
+	pitch: number;
+};
