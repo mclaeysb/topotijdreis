@@ -23,7 +23,6 @@ export type SortedLayer = RawLayer & {
 };
 
 export type Layer = SortedLayer & {
-	previousYear: number;
 	nextYear: number;
 };
 
@@ -33,3 +32,5 @@ export type Camera = {
 	bearing: number;
 	pitch: number;
 };
+
+export type Language = 'en' | 'nl' | 'fr';

@@ -10,7 +10,8 @@
 		id,
 		camera = null,
 		leaderId,
-		onCameraChange
+		onCameraChange,
+		userLocation
 	}: {
 		allLayers: SortedLayer[];
 		visibleLayerNames: string[];
@@ -18,12 +19,13 @@
 		camera: Camera | null;
 		leaderId: string | null;
 		onCameraChange: (id: string | null, camera: Camera) => void;
+		userLocation?: [number, number];
 	} = $props();
 
 	let container: HTMLElement;
 	let map: maplibregl.Map; // TODO: make readable?
 	let mapStyleLoaded = $state(false);
-	let initialized = $state(false);
+	let syncEnabled = $state(false); // ← key addition
 
 	onMount(() => {
 		map = new maplibregl.Map({
@@ -54,43 +56,39 @@
 				[6.441082276909043, 49.439402309291864]
 			]),
 			maxPitch: 0,
+			bearing: 0,
 			bearingSnap: 0,
 			attributionControl: false
 		});
+
+		map.dragRotate.disable();
+		map.touchZoomRotate.disableRotation();
 
 		map.on('style.load', () => {
 			mapStyleLoaded = true;
 		});
 
-		map.on('move', () => {
-			if (!map.isMoving()) return;
-			onCameraChange(id, {
-				center: map.getCenter().toArray(),
-				zoom: map.getZoom(),
-				bearing: map.getBearing(),
-				pitch: map.getPitch()
+		// Only register move listener after the map is fully idle
+		map.once('idle', () => {
+			syncEnabled = true;
+
+			map.on('move', () => {
+				if (!map.isMoving()) return;
+				onCameraChange(id, {
+					center: map.getCenter().toArray(),
+					zoom: map.getZoom(),
+					bearing: map.getBearing(),
+					pitch: map.getPitch()
+				});
 			});
 		});
 
-		// map.addControl(new maplibregl.NavigationControl(), 'top-right');
-		// map.addControl(
-		// 	new maplibregl.GeolocateControl({
-		// 		positionOptions: {
-		// 			enableHighAccuracy: true
-		// 		},
-		// 		trackUserLocation: true
-		// 	}),
-		// 	'top-left'
-		// );
+		onDestroy(() => {
+			if (map) map.remove();
+		});
 
 		// Ensure correct sizing if layout changes or initial size wasn't computed yet
 		requestAnimationFrame(() => map.resize());
-
-		initialized = true;
-	});
-
-	onDestroy(() => {
-		if (map) map.remove();
 	});
 
 	$effect(() => {
@@ -106,16 +104,19 @@
 	});
 
 	$effect(() => {
-		if (!map || leaderId === id || camera == null || !initialized) return;
+		if (!syncEnabled || leaderId === id || camera == null) return;
 
-		console.log(camera);
+		map.jumpTo({
+			center: camera.center as [number, number],
+			zoom: camera.zoom,
+			bearing: camera.bearing,
+			pitch: camera.pitch
+		});
+	});
 
-		// map.jumpTo({
-		// 	center: camera.center as [number, number],
-		// 	zoom: camera.zoom,
-		// 	bearing: camera.bearing,
-		// 	pitch: camera.pitch
-		// });
+	$effect(() => {
+		if (!map || !userLocation) return;
+		map.flyTo({ center: userLocation, zoom: 14 });
 	});
 </script>
 

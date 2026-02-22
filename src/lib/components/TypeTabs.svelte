@@ -19,13 +19,7 @@
 
 <Tabs.Root bind:value={selectedType}>
 	<Tabs.List>
-		<Tabs.Trigger value="topo"
-			><Map />
-			<div class="hidden md:flex">Topo</div></Tabs.Trigger
-		>
-		<Tabs.Trigger value="aerial"
-			><Camera />
-			<div class="hidden md:flex">Aerial</div></Tabs.Trigger
-		>
+		<Tabs.Trigger value="topo"><Map /></Tabs.Trigger>
+		<Tabs.Trigger value="aerial"><Camera /></Tabs.Trigger>
 	</Tabs.List>
 </Tabs.Root>

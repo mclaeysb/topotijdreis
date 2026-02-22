@@ -1,27 +1,33 @@
 <script lang="ts">
 	import Map from '$lib/components/Map.svelte';
 	import YearSlider from '$lib/components/Slider.svelte';
-	import LayersInfo from '$lib/components/LayersInfo.svelte';
+	import LayerInfo from '$lib/components/LayerInfo.svelte';
+	import * as Item from '$lib/components/ui/item/index.js';
 
 	import type { Camera, Layer, SortedLayer, Type } from '$lib/types/types';
 
-	let selectedYear: number = $state(1971);
 	let currentYear = new Date().getFullYear();
 
 	let {
 		allLayers,
-		selectedTypes,
 		id,
 		camera,
 		leaderId,
-		onCameraChange
+		onCameraChange,
+		userLocation,
+		compact = false,
+		selectedTypes = $bindable(),
+		selectedYear = $bindable()
 	}: {
 		allLayers: SortedLayer[];
-		selectedTypes: Type[];
 		id: string | null;
-		camera: Camera;
+		camera: Camera | null;
 		leaderId: string | null;
 		onCameraChange: (id: string | null, camera: Camera) => void;
+		userLocation?: [number, number];
+		compact: boolean;
+		selectedTypes: Type[];
+		selectedYear: number;
 	} = $props();
 
 	let selectedLayers: Layer[] = $derived(
@@ -37,14 +43,32 @@
 				return 0;
 			})
 			.map((layer, _i, array) => {
-				const years = Array.from(
-					new Set(array.filter((l) => l.transparent !== true).map((l) => l.year))
-				);
-				const index = years.indexOf(layer.year);
+				const nextYearBelgium =
+					array
+						.filter((l) => l.coverage == 'belgium')
+						.map((l) => l.year)
+						.filter((y) => y > layer.year)[0] ?? 3000;
+				const nextYearFlanders =
+					array
+						.filter((l) => l.coverage == 'flanders')
+						.map((l) => l.year)
+						.filter((y) => y > layer.year)[0] ?? 3000;
+				const nextYearWallonia =
+					array
+						.filter((l) => l.coverage == 'wallonia')
+						.map((l) => l.year)
+						.filter((y) => y > layer.year)[0] ?? 3000;
 				return {
 					...layer,
-					previousYear: index > 0 ? years[index - 1] : 0,
-					nextYear: index < array.length - 1 ? years[index + 1] : 3000
+					nextYearBelgium,
+					nextYearFlanders,
+					nextYearWallonia,
+					nextYear:
+						layer.coverage == 'belgium'
+							? Math.min(nextYearBelgium, Math.max(nextYearFlanders, nextYearWallonia))
+							: layer.coverage == 'flanders'
+								? Math.min(nextYearBelgium, nextYearFlanders)
+								: Math.min(nextYearBelgium, nextYearWallonia)
 				};
 			})
 	);
@@ -63,23 +87,28 @@
 </script>
 
 <div class="relative flex min-h-0 min-w-0 flex-1 flex-row">
-	<div class="absolute top-0 left-0 h-full w-20">
-		<YearSlider bind:selectedYear {selectedLayers} {earliestYear} {latestYear} />
+	<div class="absolute top-0 left-0 h-full w-22">
+		<YearSlider bind:selectedTypes bind:selectedYear {selectedLayers} {earliestYear} {latestYear} />
 	</div>
 
 	<div class="relative flex min-h-0 min-w-0 flex-1">
-		<LayersInfo {visibleLayers} />
-		<Map {allLayers} {visibleLayerNames} {id} {camera} {leaderId} {onCameraChange} />
+		<Map {allLayers} {visibleLayerNames} {id} {camera} {leaderId} {userLocation} {onCameraChange} />
+		<div class="absolute right-0 bottom-0 z-10 flex flex-col items-end">
+			{#if visibleLayers.length > 0}
+				<Item.Root
+					variant="outline"
+					class="mr-2 mb-2 flex-col !items-stretch gap-0 bg-white p-0 md:mr-4 md:mb-4 {compact
+						? 'w-90 lg:w-110'
+						: 'w-90 md:w-110'}"
+				>
+					{#each visibleLayers as layer, i}
+						{#if i > 0}
+							<hr class="border-stone-200" />
+						{/if}
+						<LayerInfo {layer} {compact} />
+					{/each}
+				</Item.Root>
+			{/if}
+		</div>
 	</div>
 </div>
-
-<!-- <div class="flex h-full w-full">
-	<aside class="h-full w-0 shadow-md md:w-20">
-		<YearSlider bind:selectedYear {selectedLayers} {earliestYear} {latestYear} />
-	</aside>
-
-	<main class="relative h-full w-full overflow-hidden">
-		<LayersInfo {visibleLayers}></LayersInfo>
-		<Map {allLayers} {visibleLayerNames} />
-	</main>
-</div> -->

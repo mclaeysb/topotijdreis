@@ -48,6 +48,7 @@
 	"dependencies": {
 		"@modyfi/vite-plugin-yaml": "^1.1.1",
 		"maplibre-gl": "^5.17.0",
+		"runed": "^0.37.1",
 		"shadcn-svelte": "^1.1.1"
 	}
 }
