@@ -25,14 +25,18 @@
 		</div>
 	</Item.Title>
 	<Item.Description class="hidden items-center text-xs {compact ? 'lg:flex' : 'md:flex'}">
-		<Badge variant="outline" class="mr-2 h-full w-18 text-xs select-none">{layer.coverage}</Badge>
-		<Button variant="link" class="mr-2 text-right text-xs text-primary"><Info />About</Button>
-		<div class="mr-3">
+		<Badge variant="outline" class="mr-4 h-full w-18 text-xs select-none">{layer.coverage}</Badge>
+		<div class="mr-2">
 			<span class="mr-0.5 text-sm">&copy;</span>
 			{@html layer.attribution}
 		</div>
-		<CopyButton size="sm" class="text-right font-mono text-xs" text={layer.url}
+		<CopyButton size="sm" class=" text-right font-mono text-xs" text={layer.url}
 			>{layer.urlType}</CopyButton
 		>
+		{#if layer.moreInfo}
+			<Button variant="link" href={layer.moreInfo} class="mr-2 text-right text-xs text-primary"
+				><Info />About</Button
+			>
+		{/if}
 	</Item.Description>
 </Item.Content>

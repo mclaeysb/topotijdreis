@@ -52,12 +52,12 @@
 					array
 						.filter((l) => l.coverage == 'flanders')
 						.map((l) => l.year)
-						.filter((y) => y > layer.year)[0] ?? 3000;
+						.filter((y) => y > layer.year)[0] ?? 3001;
 				const nextYearWallonia =
 					array
 						.filter((l) => l.coverage == 'wallonia')
 						.map((l) => l.year)
-						.filter((y) => y > layer.year)[0] ?? 3000;
+						.filter((y) => y > layer.year)[0] ?? 3001;
 				return {
 					...layer,
 					nextYearBelgium,

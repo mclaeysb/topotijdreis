@@ -5,6 +5,7 @@
   url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1947-1954/MapServer/tile/{z}/{y}/{x}"
   urlType: "XYZ"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
   type: "aerial"
   yearStart: 1947
   year: 1954
@@ -25,6 +26,7 @@
   url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1969-1979/MapServer/tile/{z}/{y}/{x}"
   urlType: "XYZ"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
   type: "aerial"
   yearStart: 1969
   year: 1979
@@ -35,6 +37,7 @@
   url: "https://geo.api.vlaanderen.be/OKZ/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=okzrgb79_90vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-kleinschalig-zomeropnamen-kleur-1979-1990-vlaanderen"
   type: "aerial"
   yearStart: 1979
   year: 1990
@@ -45,6 +48,7 @@
   url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1995/MapServer/tile/{z}/{y}/{x}"
   urlType: "XYZ"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
   type: "aerial"
   year: 1995
   coverage: "belgium"
@@ -65,6 +69,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_1994_2000/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/899d2df8-a16d-4798-acc4-19d3fd1a5e20.html"
   type: "aerial"
   yearStart: 1994
   year: 2000
@@ -86,6 +91,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2006_2007/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/55faa79d-9739-4452-9983-044b70255c6a.html"
   type: "aerial"
   yearStart: 2006
   year: 2007
@@ -107,6 +113,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2009_2010/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/97855c71-3a9a-478c-8bb3-b380c6ed9130.html"
   type: "aerial"
   yearStart: 2009
   year: 2010
@@ -127,6 +134,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2012_2013/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/f16124b7-41ed-42fe-9442-73b32708d60a.html"
   type: "aerial"
   yearStart: 2012
   year: 2013
@@ -137,17 +145,20 @@
   url: "https://geo.api.vlaanderen.be/OGW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=ogwrgb13_15vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "WMTS"
   attribution: "Luchtfoto © Digitaal Vlaanderen"
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-grootschalig-winteropnamen-kleur-2013-2015-vlaanderen"
   maxZoom: 21
   type: "aerial"
   yearStart: 2013
   year: 2015
   coverage: "flanders"
+  include: false
 
 - name: "Ortho (2013, VL)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb13vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2013-vlaanderen"
   type: "aerial"
   year: 2013
   coverage: "flanders"
@@ -157,6 +168,7 @@
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb14vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2014-vlaanderen"
   type: "aerial"
   year: 2014
   coverage: "flanders"
@@ -166,6 +178,7 @@
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb15vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2015-vlaanderen"
   type: "aerial"
   year: 2015
   coverage: "flanders"
@@ -175,6 +188,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/7233ab26-927b-49f6-b683-a52be50c4343.html"
   type: "aerial"
   year: 2015
   coverage: "wallonia"
@@ -184,6 +198,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2016/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
   type: "aerial"
   year: 2016
   coverage: "belgium"
@@ -193,6 +208,7 @@
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb16vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2016-vlaanderen"
   type: "aerial"
   year: 2016
   coverage: "flanders"
@@ -203,6 +219,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2016/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/18b20623-3130-4e64-a912-cc3e306b0b11.html"
   type: "aerial"
   year: 2016
   coverage: "wallonia"
@@ -212,6 +229,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2017/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
   type: "aerial"
   year: 2017
   coverage: "belgium"
@@ -221,6 +239,7 @@
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb17vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2017-vlaanderen"
   type: "aerial"
   year: 2017
   coverage: "flanders"
@@ -231,6 +250,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2017/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/fc1b44f1-d054-46cd-aa3e-5ef7e4efe021.html"
   type: "aerial"
   year: 2017
   coverage: "wallonia"
@@ -240,6 +260,7 @@
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb18vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2018-vlaanderen"
   type: "aerial"
   year: 2018
   coverage: "flanders"
@@ -250,6 +271,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2018/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/8071837e-3171-4ffa-8fc7-b55bb6e1b216.html"
   type: "aerial"
   year: 2018
   coverage: "wallonia"
@@ -259,6 +281,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2019/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
   type: "aerial"
   year: 2019
   coverage: "belgium"
@@ -268,6 +291,7 @@
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb19vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2019-vlaanderen"
   type: "aerial"
   year: 2019
   coverage: "flanders"
@@ -278,6 +302,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2019/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/3d3e37f5-3934-4da3-8718-be04b116935c.html"
   type: "aerial"
   year: 2019
   coverage: "wallonia"
@@ -287,8 +312,9 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2020/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
   type: "aerial"
-  year: 2022
+  year: 2020
   coverage: "belgium"
 
 - name: "Ortho (2020, VL)"
@@ -296,6 +322,7 @@
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb20vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2020-vlaanderen"
   type: "aerial"
   year: 2020
   coverage: "flanders"
@@ -306,6 +333,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2020/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/2def59a3-fc61-452c-bba8-e10121128b0d.html"
   type: "aerial"
   year: 2020
   coverage: "wallonia"
@@ -315,6 +343,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2021/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
   type: "aerial"
   year: 2021
   coverage: "belgium"
@@ -324,6 +353,7 @@
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb21vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2021-vlaanderen"  
   type: "aerial"
   year: 2021
   coverage: "flanders"
@@ -334,6 +364,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2021/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/86a5c857-6166-4557-b216-f725cb16c631.html"
   type: "aerial"
   year: 2021
   coverage: "wallonia"
@@ -343,6 +374,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2022/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
   type: "aerial"
   year: 2022
   coverage: "belgium"
@@ -352,6 +384,7 @@
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb22vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2022-vlaanderen"
   type: "aerial"
   year: 2022
   coverage: "flanders"
@@ -362,6 +395,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2022_PRINTEMPS/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/356df710-2414-4623-966c-cb46f207227c.html"
   type: "aerial"
   year: 2022
   coverage: "wallonia"
@@ -372,6 +406,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2022_ETE/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/287785d2-e45d-417f-87e1-4e78e01119b3.html"
   type: "aerial"
   year: 2022
   coverage: "wallonia"
@@ -381,6 +416,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
   type: "aerial"
   year: 2023
   coverage: "belgium"
@@ -390,6 +426,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2023_ETE/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/b0c744af-175b-441e-b812-a684a00e7724.html"
   type: "aerial"
   year: 2023
   coverage: "wallonia"
@@ -399,17 +436,27 @@
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb24vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "WMTS"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
-  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/72ecb198-84d1-4015-82c2-8e10a3c16cdf"
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2024-vlaanderen"
   type: "aerial"
   year: 2024
   coverage: "flanders"
+
+- name: "Ortho Summer (2024, WAL)"
+  description: "Orthophoto"
+  url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2024/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
+  urlType: "WMS"
+  attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/5f1737d4-a81a-407e-aa66-9a0926bb6c14.html"
+  type: "aerial"
+  year: 2024
+  coverage: "wallonia"
 
 - name: "Ortho (2025, VL)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb25vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "WMTS"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
-  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/088a9e65-83c7-4154-8078-ac2309bf41a2"
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2025-vlaanderen"
   type: "aerial"
   year: 2025
   coverage: "flanders"
@@ -419,6 +466,7 @@
   url: "https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
   urlType: "WMTS"
   attribution: "Luchtfoto © Digitaal Vlaanderen"
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-meest-recent-vlaanderen-202504"
   maxZoom: 21
   type: "aerial"
   include: false
@@ -482,6 +530,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/FERRARIS/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/b8b9e555-a4d1-49bf-940d-31bbbf7613fc.html"
   type: "topo"
   year: 1777
   coverage: "wallonia"
@@ -492,6 +541,7 @@
   urlType: "WMTS"
   format: "image/png"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/atlas-der-buurtwegen"
   type: "topo"
   year: 1840
   coverage: "flanders"
@@ -501,6 +551,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/PLAN_REGLEMENT/ATLAS_VV_MODIF/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0,3&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/45c76d4f-c727-4bbd-b9b9-670cc6d38461.html"
   type: "topo"
   year: 1840
   coverage: "wallonia"
@@ -521,6 +572,7 @@
   url: "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=vandermaelen&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
   urlType: "WMTS"
   attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/vandermaelenkaart-carte-topographique-de-la-belgique-a-lechelle-de-1-a-20000-1846-1854"
   type: "topo"
   yearStart: 1846
   year: 1854
@@ -531,6 +583,7 @@
   url: "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/VDML/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&info_format=text%2Fhtml&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
   attribution: '<a href="https://geoportail.wallonie.be/">SPW</a>'
+  moreInfo: "https://geoportail.wallonie.be/catalogue/67ed5145-72be-499b-8a95-c94711f344f1.html"
   type: "topo"
   yearStart: 1846
   year: 1854
@@ -548,28 +601,31 @@
   coverage: "wallonia"
 
 - name: "NGI Basemap 1873"
-  description: "TOP25"
+  description: "TOP20"
   url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__140/MapServer/tile/{z}/{y}/{x}"
   urlType: "XYZ"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/historische-kaarten/topografische-kaarten-op-schaal-120-000-1861-1951/"
   type: "topo"
   year: 1873
   coverage: "belgium"
 
 - name: "NGI Basemap 1904"
-  description: "TOP25"
+  description: "TOP20"
   url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__450/MapServer/tile/{z}/{y}/{x}"
   urlType: "XYZ"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/historische-kaarten/topografische-kaarten-op-schaal-120-000-1861-1951/"
   type: "topo"
   year: 1904
   coverage: "belgium"
 
 - name: "NGI Basemap 1939"
-  description: "TOP25"
+  description: "TOP20"
   url: "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__800/MapServer/tile/{z}/{y}/{x}"
   urlType: "XYZ"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://shop.ngi.be/nl/historische-kaarten/topografische-kaarten-op-schaal-120-000-1861-1951/"
   type: "topo"
   year: 1939
   coverage: "belgium"

@@ -21,6 +21,7 @@
 	// ── Defaults ────────────────────────────────────────────────────────────────
 	const DEFAULT_TYPES: Type[] = ['topo'];
 	const DEFAULT_YEAR: number = 1971;
+	const DEFAULT_LANGUAGE: Language = 'en';
 
 	function parseTypes(raw: string | null): Type[] {
 		if (!raw) return DEFAULT_TYPES;
@@ -84,7 +85,7 @@
 	});
 
 	// ── PersistedState (preference state, not shareable) ────────────────────────
-	const language = new PersistedState<Language>('language', 'nl');
+	const language = new PersistedState<Language>('language', DEFAULT_LANGUAGE);
 
 	// ── Map sync ────────────────────────────────────────────────────────────────
 	let leaderId = $state<string | null>(null);
@@ -101,7 +102,14 @@
 </svelte:head>
 
 <div class="flex h-screen flex-col">
-	<Header bind:userLocation bind:compare bind:camera bind:leaderId language={language.current} />
+	<Header
+		bind:userLocation
+		bind:compare
+		bind:camera
+		bind:leaderId
+		language={language.current}
+		text={data.text}
+	/>
 	<div
 		class="flex min-h-0 flex-1 flex-col overflow-hidden
            {compare
