@@ -17,9 +17,17 @@
 	});
 </script>
 
-<Tabs.Root bind:value={selectedType}>
-	<Tabs.List>
-		<Tabs.Trigger value="topo"><Map /></Tabs.Trigger>
-		<Tabs.Trigger value="aerial"><Camera /></Tabs.Trigger>
+<Tabs.Root bind:value={selectedType} class="">
+	<Tabs.List class="border bg-accent-foreground p-1">
+		<Tabs.Trigger
+			value="topo"
+			class="text-accent data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"
+			><Map /></Tabs.Trigger
+		>
+		<Tabs.Trigger
+			value="aerial"
+			class="text-accent data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"
+			><Camera /></Tabs.Trigger
+		>
 	</Tabs.List>
 </Tabs.Root>

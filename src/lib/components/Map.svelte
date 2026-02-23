@@ -120,4 +120,4 @@
 	});
 </script>
 
-<div class=" h-full w-full" bind:this={container}></div>
+<div class=" h-full w-full bg-white" bind:this={container}></div>

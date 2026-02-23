@@ -97,13 +97,13 @@
 			{#if visibleLayers.length > 0}
 				<Item.Root
 					variant="outline"
-					class="mr-2 mb-2 flex-col !items-stretch gap-0 bg-white p-0 md:mr-4 md:mb-4 {compact
+					class="mr-2 mb-2 flex-col !items-stretch gap-0 bg-card p-0 md:mr-4 md:mb-4 {compact
 						? 'w-90 lg:w-110'
 						: 'w-90 md:w-110'}"
 				>
 					{#each visibleLayers as layer, i}
 						{#if i > 0}
-							<hr class="border-stone-200" />
+							<hr class="" />
 						{/if}
 						<LayerInfo {layer} {compact} />
 					{/each}

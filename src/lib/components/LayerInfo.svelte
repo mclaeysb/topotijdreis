@@ -13,7 +13,7 @@
 <Item.Content class="p-1 md:p-2">
 	<Item.Title class="p-1 text-sm">
 		{layer.description}
-		<Badge class="h-full text-xs">
+		<Badge variant="default" class="h-full rounded bg-muted text-xs text-muted-foreground">
 			<span class="font-mono"
 				>{#if layer.yearStart}{layer.yearStart} →{/if}
 				{layer.year}</span
@@ -25,7 +25,9 @@
 		</div>
 	</Item.Title>
 	<Item.Description class="hidden items-center text-xs {compact ? 'lg:flex' : 'md:flex'}">
-		<Badge variant="outline" class="mr-4 h-full w-18 text-xs select-none">{layer.coverage}</Badge>
+		<Badge variant="outline" class="mr-4 h-full w-18 rounded text-xs select-none"
+			>{layer.coverage}</Badge
+		>
 		<div class="mr-2">
 			<span class="mr-0.5 text-sm">&copy;</span>
 			{@html layer.attribution}
@@ -34,7 +36,7 @@
 			>{layer.urlType}</CopyButton
 		>
 		{#if layer.moreInfo}
-			<Button variant="link" href={layer.moreInfo} class="mr-2 text-right text-xs text-primary"
+			<Button variant="link" href={layer.moreInfo} class="mr-2 text-right text-xs text-foreground"
 				><Info />About</Button
 			>
 		{/if}

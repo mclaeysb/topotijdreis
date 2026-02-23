@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { mapContext } from '$lib/map-context';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { browser } from '$app/environment';
@@ -9,6 +10,8 @@
 	import type { Camera, Language, SortedLayer, Type } from '$lib/types/types';
 
 	let { data } = $props();
+
+	const map = mapContext.get();
 
 	const currentYear = new Date().getFullYear();
 
@@ -95,6 +98,10 @@
 		leaderId = id;
 		camera = newCamera;
 	}
+
+	$effect(() => {
+		map.year = yearA;
+	});
 </script>
 
 <svelte:head>
@@ -111,9 +118,9 @@
 		text={data.text}
 	/>
 	<div
-		class="flex min-h-0 flex-1 flex-col overflow-hidden
+		class="flex min-h-0 flex-1 flex-col overflow-hidden bg-border
            {compare
-			? 'portrait:flex-col portrait:gap-y-1 landscape:flex-row landscape:gap-x-1'
+			? 'portrait:flex-col portrait:gap-y-0.5 landscape:flex-row landscape:gap-x-0.5'
 			: ''}"
 	>
 		<MapWithSlider

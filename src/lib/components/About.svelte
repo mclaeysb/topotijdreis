@@ -20,7 +20,7 @@
 		<div class="hidden md:flex">About</div></Dialog.Trigger
 	>
 
-	<Dialog.Content class="flex max-h-[80vh] max-w-150 flex-col">
+	<Dialog.Content class="flex max-h-[80vh] max-w-300 flex-col">
 		<div
 			class="prose prose-sm overflow-y-auto [-ms-overflow-style:none] [scrollbar-width:none] dark:prose-invert [&::-webkit-scrollbar]:hidden"
 		>

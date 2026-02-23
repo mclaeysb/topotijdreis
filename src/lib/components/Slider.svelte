@@ -23,7 +23,7 @@
 </script>
 
 <div class="flex h-full w-full flex-col">
-	<div class="z-20 flex justify-center py-2 md:bg-stone-800">
+	<div class="z-20 flex justify-center py-2 md:border-r-1 md:bg-sidebar">
 		<div class="-ml-0.5">
 			<TypeTabs bind:selectedTypes />
 		</div>
@@ -42,17 +42,17 @@
 		>
 			{#snippet children({ tickItems })}
 				<span
-					class="absolute z-5 hidden h-full w-full cursor-pointer overflow-hidden border-r border-stone-900 bg-stone-800 transition md:flex"
+					class="absolute z-5 hidden h-full w-full cursor-pointer overflow-hidden border-r-1 bg-sidebar transition md:flex"
 				>
-					<Slider.Range class="absolute w-full bg-stone-800" />
+					<Slider.Range class="absolute w-full " />
 				</span>
 
 				<Slider.Thumb
 					index={0}
-					class="border-grey-700 justify left-0 z-20 flex h-9	 w-24 cursor-pointer items-center rounded-r-sm border border-l-0 bg-white shadow-lg focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 "
+					class="border-grey-700 justify left-0 z-20 flex h-9	 w-24 cursor-pointer items-center rounded-r-sm border border-l-0 bg-primary shadow-md focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
 				>
 					<!-- hover:scale-110 -->
-					<span class="ml-4 flex items-center text-xl font-bold text-stone-700">
+					<span class="ml-4 flex items-center text-xl font-bold text-sidebar">
 						{selectedYear}
 						<ChevronsUpDown class="ml-1" size={16} />
 					</span>
@@ -62,14 +62,14 @@
 					{#if value % 5 === 0}
 						<Slider.Tick
 							{index}
-							class="z-10 ml-2 hidden h-0.5 w-1 bg-stone-400 transition md:flex"
+							class="z-10 ml-2 hidden h-0.5 w-1 bg-muted-foreground transition md:flex"
 						/>
 					{/if}
 					{#if value % 25 === 0 || value === earliestYear}
 						<Slider.TickLabel
 							{index}
 							position="right"
-							class="z-5 -ml-11 hidden text-xs leading-none font-medium text-stone-200 transition md:flex"
+							class="z-5 -ml-14 hidden text-xs leading-none font-medium text-sidebar-foreground transition md:flex"
 						>
 							{value}
 						</Slider.TickLabel>
@@ -79,13 +79,13 @@
 					{#if selectedYears.includes(value)}
 						<Slider.Tick
 							{index}
-							class="-left-0.5 z-10 ml-2 hidden h-2 w-2 rounded-2xl bg-stone-300 transition md:flex"
+							class="-left-0.5 z-10 ml-2 hidden h-2 w-2 rounded-2xl bg-primary transition md:flex"
 						/>
 					{/if}
 				{/each}
 				<!-- {#each tickItems as { index, value } (index)}
 				{#if selectedYears.includes(value)}
-				<Slider.Tick {index} class="z-10 ml-2 h-1 w-1 rounded-2xl bg-stone-600" />
+				<Slider.Tick {index} class="z-10 ml-2 h-1 w-1 rounded-2xl bg-sidebar-foreground" />
 				{/if}
 				{/each} -->
 			{/snippet}

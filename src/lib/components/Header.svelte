@@ -40,15 +40,15 @@
 	const triggerContent = $derived(languages.find((l) => l.value === language)?.label ?? 'Language');
 </script>
 
-<header class="z-20 bg-white">
+<header class="z-20">
 	<nav
 		aria-label="Global"
-		class="mx-auto flex items-center justify-between border-b border-stone-300 p-2 shadow-lg md:px-8"
+		class="mx-auto flex items-center justify-between border-b-1 bg-sidebar p-2 md:px-8"
 	>
 		<div class="flex flex-1 gap-0 md:gap-2">
 			<Button
-				variant="default"
-				class="bg-stone-800"
+				variant="secondary"
+				class=""
 				aria-label="Toggle compare mode"
 				aria-pressed={compare}
 				onclick={toggleCompare}
@@ -59,7 +59,7 @@
 			<LocateMe bind:userLocation />
 		</div>
 		<div class="relative">
-			<div class="mr-4 text-xl font-medium text-stone-900 select-none">Topotijdreis.be</div>
+			<div class="mr-4 text-xl font-medium select-none">Topotijdreis.be</div>
 		</div>
 		<!-- <div class="hidden md:flex md:flex-1 md:justify-end"> -->
 		<div class="flex flex-1 justify-end">
