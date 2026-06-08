@@ -1,51 +1,53 @@
 
 en:
   about: |
-      Topotijdreis.be is the (unofficial) Belgian sibling to [Topotijdreis.nl](https://www.topotijdreis.nl/).
-      
-      It is a tool to easily explore topographic maps and aerial imagery through time.
+    Topotijdreis.be is the (unofficial) Belgian sibling to [Topotijdreis.nl](https://www.topotijdreis.nl/).
 
-      ### A birthday present inspired by the Dutch
+    It's a tool to browse through topographic maps and aerial imagery, describing how places in Belgium have changed through time.
 
-      **To celebrate 200 years** since the foundation of *Topographisch Bureau* in 1815, the Dutch *Kadaster* **launched Topotijdreis.nl in 2015**. It's an online tool that allows users to browse through two centuries of Dutch (mapping) history. 
+    ### A birthday present inspired by the Dutch
 
-      **Belgium's history** being tightly intertwined with its Lower Countries sibling, its mapping efforts started after their *break-up* (it's complicated) in 1831 under the name *Dépôt de la guerre et de la Topographie* and later the *Institut Cartographique Militaire*. The founding of the current *National Geographic Institute* (NGI) followed in 1976, which means there's not just a 200-years anniversary of (Belgium and it's) *Dépôt de la guerre* coming up, but **we will also be celebrating a 50-years anniversary of the NGI in 2026**!
+    **To celebrate 200 years** since the foundation of the *Topographisch Bureau* in 1815, the Dutch *Kadaster* **launched Topotijdreis.nl in 2015**. It allows users to discover two centuries of Dutch mapping history online.
 
-      Inspired by Topotijdreis.nl, I made this tool in 2026 as **a birthday present** for our dear Belgian mapping institutions, and for anyone interested in historical maps. In times of changing climate, flourishing brownfields and shifting baselines, let's study the past to learn lessons for our future.
+    **Belgium's history** being tightly intertwined with its Low Countries sibling, its mapping efforts started after their *break-up* (it's complicated) in 1831 under the name *Dépôt de la guerre et de la Topographie*, and later the *Institut Cartographique Militaire*. The founding of the current *National Geographic Institute* (NGI) followed in 1976, which means there's not just a 200-year anniversary of Belgium's *Dépôt de la guerre* coming up, but **we will also be celebrating the 50th anniversary of the NGI in 2026**!
 
-      ### Historical maps and aerial imagery
+    Inspired by Topotijdreis.nl, I made this tool in 2026 as **a birthday present** for our dear Belgian mapping institutions, and for anyone interested in historical maps. In times of a flash floods, flourishing brownfields, and shifting baselines, let's study our environment and our settlement in it to learn lessons for our future.
 
-      This tool lets you browse historical topographic maps and aerial imagery from Belgium.
+    ### Historical maps and aerial imagery
 
-      A **topographic map** is a type of map showing both natural features (like rivers, forest cover and relief) and artificial features (like roads, houses and administrative areas). Large-scale (i.e. high detail) topographic maps are the type of maps you'd want to have with you if you're leaving on a hike! The NGI website has some [more information](https://ngi.be/aanbod/digitale-geodata/standaard-topografische-kaarten/) on these types of maps.
-      
-      An **orthophoto** is a set of pictures taken from a plane and stitched together to form a continuous image. The NGI can tell you [more about them](https://ngi.be/aanbod/digitale-geodata/orthofotos/).
+    This tool lets you browse historical topographic maps and aerial imagery from Belgium.
 
-      Just like in the Netherlands, official mapping institutions in Belgium are **preserving our archival mapping heritage** and creating new online and printed maps of the territory. In federal Belgium, mapping powers are distributed between the federal NGI (topographic maps, aerial imagery and historical topographic map starting from 1873) and the regional agencies in Flanders, Wallonia and Brussels (digital reference maps, aerial maps, thematic policy maps and pre-1873 historical maps). 
-      
-      All three agencies have an online digital viewer (NGI's [TopoMapViewer](http://topomapviewer.ngi.be/), Flanders [GeoPunt](https://www.geopunt.be/) and Wallonia's [WalOnMap](https://geoportail.wallonie.be/walonmap), the latter winning the prize for most original name). Over the last couple of years, all of these institutes have digitised their most important historical maps and commissioned yearly aerial imagery within their own scope. This creates the current - and typically Belgian - situation where one can browse the 1777 Ferraris map of Flanders in GeoPunt, find the current topographical map on TopoMapViewer and see 2018 imagery of the Ardennes on WalOnMap, but **no official viewer brings them all together**. And that's where **this tool** comes in.
+    - A **topographic map** is a type of map showing both natural features (like rivers, forest cover, and relief) and artificial features (like roads, houses, and administrative areas). Large-scale (i.e., highly detailed) topographic maps are the type of maps you'd want to have with you if you're leaving on a hike! The NGI website has [more information](https://ngi.be/aanbod/digitale-geodata/standaard-topografische-kaarten/) on these types of maps.
+    - An **orthophoto** is a set of pictures taken from a plane and stitched together to form a continuous image. The NGI can tell you [more about them](https://ngi.be/aanbod/digitale-geodata/orthofotos/).
 
-      ### Open Data
+    Just like in the Netherlands, official mapping institutions in Belgium are **preserving our cartographic heritage** and creating new online and printed maps of the territory. In federal Belgium, mapping responsabilities are distributed between the federal NGI (topographic maps, aerial imagery, and historical topographic maps starting from 1873) and the regional agencies in Flanders, Wallonia, and Brussels (digital reference maps, aerial maps, thematic policy maps, and pre-1873 historical maps).
 
-      This tool is just a *viewer*: it displays maps directly from the servers of the official institutions. This is only possible because these institutions, next to hosting their own viewers, have also been adopting commons **standards for making (raster) maps available online** (these are standards for [(tiled) webmaps](https://en.wikipedia.org/wiki/Tiled_web_map) and go by names like [WMS](https://en.wikipedia.org/wiki/Web_Map_Service), [WMTS](https://en.wikipedia.org/wiki/Web_Map_Tile_Service) and XYZ - with Flanders even picking up on the newest [OGC API standards](https://ogcapi.ogc.org/tiles/)!). Each individual map in this tool is available from a server of an institution using one of these standards.
+    All three agencies have an online digital viewer: the NGI's [TopoMapViewer](http://topomapviewer.ngi.be/), Flanders' [GeoPunt](https://www.geopunt.be/), and Wallonia's [WalOnMap](https://geoportail.wallonie.be/walonmap)) — the latter winning the prize for the most original name. (The Flanders' maps often also cover Brussels, so we won't include specific Brussels maps here). Over the last couple of years, all of these institutes have digitized their most important historical maps and commissioned yearly aerial imagery within their own scope. This creates a unique, and typically-Belgian situation where one can browse the 1777 Ferraris map of Flanders in GeoPunt, find the current topographical map on TopoMapViewer, and see 2018 imagery of the Ardennes on WalOnMap, but **no official viewer brings them all together**. And that's where this tool comes in.
 
-      Already before this viewer existed, experienced users could employ tools like [QGIS](http://qgis.org/) to overlay webmap layers or add them in their GIS research pipelines. The main realisation of this tool is to bring these layers together for everyday users with an easy-to-use slider: **all historical maps and imagery of Belgium in one tool, with just a slider and a switch**!
+    ### Open Data
 
-      Before you think 'Yeay, one viewer to rule them all!', I'll just remind you **there are many historical maps not available in this viewer**: this tool deliberately only includes maps covering at least an entire region (Flanders or Wallonia) or otherwise the entire territory of Belgium. Other historical maps exist of course, which cover only specific areas (from city centers to entire provinces - check out the map of the [Liberty of Bruges from 1571](https://www.vlaanderen.be/datavindplaats/catalogus/claeissenskaart) (!) on GeoPunt), but these were omitted in this tool to keep year-indication straight-forward. Old maps with smaller scales, where cities and villages are visible but not individual houses, were also not included. **The goal here was to make a tool that's useful across Belgium**: I've so often been in the situation where I wanted to look up what the geographic history of the place was, that I really wanted this tool to exist, so I made it.
+    This tool is just a *viewer*: it displays maps directly from the servers of the official institutions. This is only possible because these institutions, alongside hosting their own viewers, have also been adopting common **standards for making (raster) maps available online**. These are standards for [(tiled) webmaps services](https://en.wikipedia.org/wiki/Tiled_web_map) and go by names like [WMS](https://en.wikipedia.org/wiki/Web_Map_Service), [WMTS](https://en.wikipedia.org/wiki/Web_Map_Tile_Service), and XYZ—with Flanders even picking up on the newest [OGC API standards](https://ogcapi.ogc.org/tiles/)! Each individual map in this viewer is available from an institution's service using one of these standards.
 
-      We can't create one easy-to-use tool that does it all, but we can make interoperable tools and publish open data. In that spirit: if you want to **use one of these maps in your own GIS project**, the WMS/WMTS/XYZ button in the legend allows you to click-to-copy the relevant link. Long live open data!
+    Even before this viewer existed, experienced users could employ tools like [QGIS](http://qgis.org/) and point to these services to overlay webmap layers or add them to their GIS research pipelines. The main achievement of this tool is bringing these layers together in an easy-to-use tool for everyday users: **all historical maps and imagery of Belgium in one tool, with just a slider and a switch**!
 
-      ### More historical maps
+    Before you think "Yay, one viewer to rule them all!", I'll just remind you that **there are many historical maps not available in this viewer**: this tool deliberately only includes maps covering at least an entire region (Flanders or Wallonia) or the entire territory of Belgium. Other historical maps exist, of course, which cover only specific areas (from city centers to entire provinces — like the map of the [Liberty of Bruges from 1571](https://www.vlaanderen.be/datavindplaats/catalogus/claeissenskaart) available on GeoPunt), but these were omitted from this tool to keep the year-indicator straightforward. Old maps with smaller scales, where cities and villages are visible but not individual houses, were also not included. **The goal here was to make a tool that's useful across Belgium**: I've so often wanted to look up the geographic history of the neighbourhood I'm visiting that I really wanted a tool like this to exist. So I made it!
 
-      Are you looking for more historical maps?
+    We can't create one easy-to-use tool that solves all use-cases. But we can make interoperable tools and publish open data. In that spirit: if you want to **use one of these maps in your own GIS project**, the copy button in the layer legend allows you to click-to-copy the relevant WMS/WMTS/XYZ link. Long live open data!
 
-      - In recent years a great number of **hard-cover books** have been published describing the history of the lower countries using historical maps. 
-      - NGI has physical and in many cases digital copies of [**other series of historical maps**](https://shop.ngi.be/nl/historische-kaarten/). You can order these on their website. Let's hope they will become available online soon!
-      - For online historical cartography, the **viewers listed above** include more maps that didn't make the criteria listed above. 
-      - There's also the excellent **lists maintained by Michel Stuyts** with [WMS](https://wms.michelstuyts.be/), [WMTS](https://wmts.michelstuyts.be/) and [XYZ](https://xyz.michelstuyts.be/) for Belgium, which were a great resource for the maps in this tool and in an earlier tool by the Belgian chapter of OpenStreetMap, who were first to compile a viewer for [historical maps in Belgium](https://historical.osm.be/). 
-      - Furthermore, the NGI together with three other federal institutes launched a tool called [**Cartesius**](http://www.cartesius.be/) to make their historical maps more discoverable, but the tool has sadly been stuck in an unusable state for some years now. Let's hope the upcoming anniversaries bring it back soon!
+    And while we're at it, this is a good time to salute the contributors of Open Source projects like MapLibre and Svelte, the shoulder on which this tool is standing.
 
-      And finally, since a couple of years a new type of historical mapping project is alive in the lower countries and worldwide, and I've been lucky enough to contribute to it: [**Allmaps**](https://allmaps.org) is a suite of tools to georeference digitised maps, published by archives as IIIF images, and bring them together in an online viewer. [Georeference](https://editor.allmaps.org/) maps, [view](https://viewer.allmaps.org/), [find](https://here.allmaps.org/) maps around you or [explore](https://dev.explore.allmaps.org/) the growing database of historical maps.
+    ### More historical maps
 
-      Cheers
-      Manuel - winter 2026
+    Are you looking for more historical maps?
+
+    - In recent years, a great number of **hardcover books** have been published describing the history of the Low Countries using historical maps. Books like [*De geschiedenis van België in 100 oude kaarten*](https://www.lannoo.com/nl/de-geschiedenis-van-belgi%C3%AB-100-oude-kaarten), and similar books for specific cities, regions and eras. Check your local library, they might have some.
+    - The NGI has physical and, in many cases, digital copies of [**other series of historical maps**](https://shop.ngi.be/nl/historische-kaarten/). You can order these on their website. Let's hope they become available online soon!
+    - For online historical cartography, the **viewers listed above** include more maps that didn't meet the criteria listed here.
+    - There are also the excellent **lists maintained by Michel Stuyts** with [WMS](https://wms.michelstuyts.be/), [WMTS](https://wmts.michelstuyts.be/), and [XYZ](https://xyz.michelstuyts.be/) links for Belgium. These were a great resource for the maps in this tool, and for an earlier tool by the Belgian chapter of OpenStreetMap, who were first to compile a viewer for [historical maps in Belgium](https://historical.osm.be/).
+    - Furthermore, the NGI, together with three other federal institutes, launched a tool called [**Cartesius**](http://www.cartesius.be/) to make their historical maps more discoverable. The tool has sadly been stuck in an unusable state for some years now. Let's hope the occasion of the anniversaries bring it back soon.
+
+    And finally, for a couple of years now, a new type of historical mapping project has been active in the Low Countries and worldwide (and I've been lucky enough to contribute to it): [**Allmaps**](https://allmaps.org) is a suite of tools to georeference digitized maps, published by archives as IIIF images, and bring them together in an online viewer. You can [georeference](https://editor.allmaps.org/) maps, [view](https://viewer.allmaps.org/) them, [find](https://here.allmaps.org/) maps around you, or [explore](https://dev.explore.allmaps.org/) the growing database of historical maps.
+
+    Cheers,
+
+    Manuel — June 8th, 2026

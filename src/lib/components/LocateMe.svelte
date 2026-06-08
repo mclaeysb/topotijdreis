@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Loader2, LocateFixed } from '@lucide/svelte';
+	import { LoaderCircle, LocateFixed } from '@lucide/svelte';
 	import { Button } from './ui/button';
 
 	let {
@@ -27,7 +27,7 @@
 
 <Button variant="outline" onclick={requestLocation} class="ml-2" title="Locate me">
 	{#if locating}
-		<Loader2 class="animate-spin" size={20} />
+		<LoaderCircle class="animate-spin" size={20} />
 	{:else}
 		<LocateFixed size={20} />
 	{/if}

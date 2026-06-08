@@ -1,17 +1,126 @@
 # ── AERIAL ────────────────────────────────────────────────────────────────────
 
-- name: "NGI ortho 1947-1954"
+- name: "Orthophoto (1947, partial)"
   description: "Orthophoto"
-  url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1947-1954/MapServer/tile/{z}/{y}/{x}"
+  url: "https://wmts.ngi.be/orthophotos_1940s/1.0.0/orthophoto_1947/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "XYZ"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
-  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
+  moreInfo: "https://www.geo.be/catalog/details/9f6c5478-7206-11f0-abb4-00be433d8c24?l=en"
   type: "aerial"
-  yearStart: 1947
-  year: 1954
-  coverage: "belgium"
+  year: 1947
+  coverage: "partial"
 
-- name: "Ortho (1971, VL)"
+- name: "Orthophoto (1948, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1940s/1.0.0/orthophoto_1948/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/9f6c5478-7206-11f0-abb4-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1948
+  coverage: "partial"
+
+- name: "Orthophoto (1950, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1950s/1.0.0/orthophoto_1950/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/41f6ea30-720b-11f0-8c1e-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1950
+  coverage: "partial"
+
+- name: "Orthophoto (1951, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1950s/1.0.0/orthophoto_1951/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/41f6ea30-720b-11f0-8c1e-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1951
+  coverage: "partial"
+
+- name: "Orthophoto (1952, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1950s/1.0.0/orthophoto_1952/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/41f6ea30-720b-11f0-8c1e-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1952
+  coverage: "partial"
+
+- name: "Orthophoto (1954, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1950s/1.0.0/orthophoto_1954/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/41f6ea30-720b-11f0-8c1e-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1954
+  coverage: "partial"
+
+- name: "Orthophoto (1960, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1960s/1.0.0/orthophoto_1960/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/f580600b-720d-11f0-aab7-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1960
+  coverage: "partial"
+
+- name: "Orthophoto (1961, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1960s/1.0.0/orthophoto_1961/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/f580600b-720d-11f0-aab7-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1961
+  coverage: "partial"
+
+- name: "Orthophoto (1966, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1960s/1.0.0/orthophoto_1966/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/f580600b-720d-11f0-aab7-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1966
+  coverage: "partial"
+
+- name: "Orthophoto (1969, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1960s/1.0.0/orthophoto_1969/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/f580600b-720d-11f0-aab7-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1969
+  coverage: "partial"
+
+- name: "Orthophoto (1970, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1970s/1.0.0/orthophoto_1970/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/b42b938f-720f-11f0-a5df-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1970
+  coverage: "partial"
+
+- name: "Orthophoto (1971, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1970s/1.0.0/orthophoto_1971/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/b42b938f-720f-11f0-a5df-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1971
+  coverage: "partial"
+
+- name: "Orthophoto (1971, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OKZ/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=okzpan71vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "WMTS"
@@ -21,18 +130,47 @@
   year: 1971
   coverage: "flanders"
 
-- name: "NGI ortho 1969-1979"
+- name: "Orthophoto (1976, partial)"
   description: "Orthophoto"
-  url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1969-1979/MapServer/tile/{z}/{y}/{x}"
+  url: "https://wmts.ngi.be/orthophotos_1970s/1.0.0/orthophoto_1976/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "XYZ"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
-  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
+  moreInfo: "https://www.geo.be/catalog/details/b42b938f-720f-11f0-a5df-00be433d8c24?l=en"
   type: "aerial"
-  yearStart: 1969
-  year: 1979
-  coverage: "belgium"
+  year: 1976
+  coverage: "partial"
 
-- name: "Ortho (1979-1990, VL)"
+- name: "Orthophoto (1977, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1970s/1.0.0/orthophoto_1977/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/b42b938f-720f-11f0-a5df-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1977
+  coverage: "partial"
+
+- name: "Orthophoto (1978, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1970s/1.0.0/orthophoto_1978/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/b42b938f-720f-11f0-a5df-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1978
+  coverage: "partial"
+
+- name: "Orthophoto (1979, partial)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1970s/1.0.0/orthophoto_1979/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/b42b938f-720f-11f0-a5df-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1979
+  coverage: "partial"
+
+- name: "Orthophoto (1979-1990, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OKZ/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=okzrgb79_90vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
@@ -43,28 +181,17 @@
   year: 1990
   coverage: "flanders"
 
-- name: "NGI ortho 1995"
+- name: "Orthophoto (1989, partial)"
   description: "Orthophoto"
-  url: "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1995/MapServer/tile/{z}/{y}/{x}"
+  url: "https://wmts.ngi.be/orthophotos_1980s/1.0.0/orthophoto_1989/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "XYZ"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
-  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
+  moreInfo: "https://www.geo.be/catalog/details/e8a9bc27-7210-11f0-b595-00be433d8c24?l=en"
   type: "aerial"
-  year: 1995
-  coverage: "belgium"
+  year: 1989
+  coverage: "partial"
 
-- name: "Ortho (2000-2003, VL)"
-  description: "Orthophoto"
-  url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb00_03vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
-  urlType: "WMTS"
-  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
-  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/ded85fcf-bf6e-497c-8a89-4896762e04ad"
-  type: "aerial"
-  yearStart: 2000
-  year: 2003
-  coverage: "flanders"
-
-- name: "Ortho (1994-2000, WAL)"
+- name: "Orthophoto (1994-2000, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_1994_2000/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -75,7 +202,128 @@
   year: 2000
   coverage: "wallonia"
 
-- name: "Ortho (2005-2007, VL)"
+- name: "Orthophoto (1995, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1990s/1.0.0/orthophoto_1995/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/33d8889f-841e-11f0-b7bb-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1995
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (1997, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1990s/1.0.0/orthophoto_1997/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/33d8889f-841e-11f0-b7bb-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1997
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (1998, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1990s/1.0.0/orthophoto_1998/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/33d8889f-841e-11f0-b7bb-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1998
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (1999, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_1990s/1.0.0/orthophoto_1999/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/33d8889f-841e-11f0-b7bb-00be433d8c24?l=en"
+  type: "aerial"
+  year: 1999
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2000, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2000/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/0d6b76d6-841f-11f0-8dcf-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2000
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2000-2003, flanders)"
+  description: "Orthophoto"
+  url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb00_03vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  urlType: "WMTS"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://metadata.vlaanderen.be/srv/dut/catalog.search#/metadata/ded85fcf-bf6e-497c-8a89-4896762e04ad"
+  type: "aerial"
+  yearStart: 2000
+  year: 2003
+  coverage: "flanders"
+
+- name: "Orthophoto (2001, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2001/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/0d6b76d6-841f-11f0-8dcf-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2001
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2002, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2002/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/0d6b76d6-841f-11f0-8dcf-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2002
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2003, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2003/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/0d6b76d6-841f-11f0-8dcf-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2003
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2004, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2004/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/0d6b76d6-841f-11f0-8dcf-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2004
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2005, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2005/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/0d6b76d6-841f-11f0-8dcf-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2005
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2005-2007, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb05_07vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "WMTS"
@@ -86,7 +334,18 @@
   year: 2007
   coverage: "flanders"
 
-- name: "Ortho (2006-2007, WAL)"
+- name: "Orthophoto (2006, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2006/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/0d6b76d6-841f-11f0-8dcf-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2006
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2006-2007, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2006_2007/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -97,7 +356,29 @@
   year: 2007
   coverage: "wallonia"
 
-- name: "Ortho (2008-2011, VL)"
+- name: "Orthophoto (2007, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2007/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/0d6b76d6-841f-11f0-8dcf-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2007
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2008, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2008/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/0d6b76d6-841f-11f0-8dcf-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2008
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2008-2011, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb08_11vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "WMTS"
@@ -108,7 +389,18 @@
   year: 2011
   coverage: "flanders"
 
-- name: "Ortho (2009-2010, WAL)"
+- name: "Orthophoto (2009, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2009/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/0d6b76d6-841f-11f0-8dcf-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2009
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2009-2010, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2009_2010/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -119,7 +411,40 @@
   year: 2010
   coverage: "wallonia"
 
-- name: "Ortho (2012, VL)"
+- name: "Orthophoto (2010, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2010s/1.0.0/orthophoto_2010/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/80a64edd-841f-11f0-8409-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2010
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2011, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2010s/1.0.0/orthophoto_2011/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/80a64edd-841f-11f0-8409-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2011
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2012, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2010s/1.0.0/orthophoto_2012/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/80a64edd-841f-11f0-8409-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2012
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2012, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb12vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "WMTS"
@@ -129,7 +454,7 @@
   year: 2012
   coverage: "flanders"
 
-- name: "Ortho (2012-2013, WAL)"
+- name: "Orthophoto (2012-2013, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2012_2013/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -140,7 +465,28 @@
   year: 2013
   coverage: "wallonia"
 
-- name: "High res winter aerial imagery (FL, 2013-2015)"
+- name: "Orthophoto (2013, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2010s/1.0.0/orthophoto_2013/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/80a64edd-841f-11f0-8409-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2013
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2013, flanders)"
+  description: "Orthophoto"
+  url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb13vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  urlType: "XYZ"
+  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
+  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2013-vlaanderen"
+  type: "aerial"
+  year: 2013
+  coverage: "flanders"
+
+- name: "Orthophoto (2013-2015, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OGW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=ogwrgb13_15vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "WMTS"
@@ -153,17 +499,18 @@
   coverage: "flanders"
   include: false
 
-- name: "Ortho (2013, VL)"
+- name: "Orthophoto (2014, belgium)"
   description: "Orthophoto"
-  url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb13vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
+  url: "https://wmts.ngi.be/orthophotos_2010s/1.0.0/orthophoto_2014/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "XYZ"
-  attribution: '<a href="https://www.vlaanderen.be/datavindplaats">Digitaal Vlaanderen</a>'
-  moreInfo: "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-2013-vlaanderen"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/80a64edd-841f-11f0-8409-00be433d8c24?l=en"
   type: "aerial"
-  year: 2013
-  coverage: "flanders"
+  year: 2014
+  coverage: "belgium"
+  include: false
 
-- name: "Ortho (2014, VL)"
+- name: "Orthophoto (2014, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb14vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
@@ -173,7 +520,18 @@
   year: 2014
   coverage: "flanders"
 
-- name: "Ortho (2015, VL)"
+- name: "Orthophoto (2015, belgium)"
+  description: "Orthophoto"
+  url: "https://wmts.ngi.be/orthophotos_2010s/1.0.0/orthophoto_2015/default/3857/latest/{z}/{y}/{x}.png"
+  urlType: "XYZ"
+  attribution: '<a href="http://www.ngi.be/">NGI</a>'
+  moreInfo: "https://www.geo.be/catalog/details/80a64edd-841f-11f0-8409-00be433d8c24?l=en"
+  type: "aerial"
+  year: 2015
+  coverage: "belgium"
+  include: false
+
+- name: "Orthophoto (2015, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb15vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
@@ -183,7 +541,7 @@
   year: 2015
   coverage: "flanders"
 
-- name: "Ortho (2015, WAL)"
+- name: "Orthophoto (2015, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2015/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -193,7 +551,7 @@
   year: 2015
   coverage: "wallonia"
 
-- name: "NGI ortho 2016"
+- name: "Orthophoto (2016, belgium)"
   description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2016/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
@@ -203,7 +561,7 @@
   year: 2016
   coverage: "belgium"
 
-- name: "Ortho (2016, VL)"
+- name: "Orthophoto (2016, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb16vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
@@ -214,7 +572,7 @@
   coverage: "flanders"
   include: false
 
-- name: "Ortho (2016, WAL)"
+- name: "Orthophoto (2016, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2016/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -224,7 +582,7 @@
   year: 2016
   coverage: "wallonia"
 
-- name: "NGI ortho 2017"
+- name: "Orthophoto (2017, belgium)"
   description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2017/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
@@ -234,7 +592,7 @@
   year: 2017
   coverage: "belgium"
 
-- name: "Ortho (2017, VL)"
+- name: "Orthophoto (2017, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb17vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
@@ -245,7 +603,7 @@
   coverage: "flanders"
   include: false
 
-- name: "Ortho (2017, WAL)"
+- name: "Orthophoto (2017, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2017/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -255,7 +613,7 @@
   year: 2017
   coverage: "wallonia"
 
-- name: "Ortho (2018, VL)"
+- name: "Orthophoto (2018, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb18vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
@@ -264,9 +622,8 @@
   type: "aerial"
   year: 2018
   coverage: "flanders"
-  include: false
 
-- name: "Ortho (2018, WAL)"
+- name: "Orthophoto (2018, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2018/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -276,7 +633,7 @@
   year: 2018
   coverage: "wallonia"
 
-- name: "NGI ortho 2019"
+- name: "Orthophoto (2019, belgium)"
   description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2019/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
@@ -286,7 +643,7 @@
   year: 2019
   coverage: "belgium"
 
-- name: "Ortho (2019, VL)"
+- name: "Orthophoto (2019, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb19vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
@@ -297,7 +654,7 @@
   coverage: "flanders"
   include: false
 
-- name: "Ortho (2019, WAL)"
+- name: "Orthophoto (2019, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2019/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -307,7 +664,7 @@
   year: 2019
   coverage: "wallonia"
 
-- name: "NGI ortho 2020"
+- name: "Orthophoto (2020, belgium)"
   description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2020/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
@@ -317,7 +674,7 @@
   year: 2020
   coverage: "belgium"
 
-- name: "Ortho (2020, VL)"
+- name: "Orthophoto (2020, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb20vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
@@ -328,7 +685,7 @@
   coverage: "flanders"
   include: false
 
-- name: "Ortho (2020, WAL)"
+- name: "Orthophoto (2020, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2020/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -338,7 +695,7 @@
   year: 2020
   coverage: "wallonia"
 
-- name: "NGI ortho 2021"
+- name: "Orthophoto (2021, belgium)"
   description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2021/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
@@ -348,7 +705,7 @@
   year: 2021
   coverage: "belgium"
 
-- name: "Ortho (2021, VL)"
+- name: "Orthophoto (2021, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb21vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
@@ -359,7 +716,7 @@
   coverage: "flanders"
   include: false
 
-- name: "Ortho (2021, WAL)"
+- name: "Orthophoto (2021, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2021/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -369,7 +726,7 @@
   year: 2021
   coverage: "wallonia"
 
-- name: "NGI ortho 2022"
+- name: "Orthophoto (2022, belgium)"
   description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2022/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
@@ -379,7 +736,7 @@
   year: 2022
   coverage: "belgium"
 
-- name: "Ortho (2022, VL)"
+- name: "Orthophoto (2022, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb22vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "XYZ"
@@ -390,7 +747,7 @@
   coverage: "flanders"
   include: false
 
-- name: "Ortho Spring (2022, WAL)"
+- name: "Orthophoto (2022, wallonia, spring)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2022_PRINTEMPS/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -401,7 +758,7 @@
   coverage: "wallonia"
   include: false
 
-- name: "Ortho Summer (2022, WAL)"
+- name: "Orthophoto (2022, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2022_ETE/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -411,7 +768,7 @@
   year: 2022
   coverage: "wallonia"
 
-- name: "NGI ortho 2023"
+- name: "Orthophoto (2023, belgium)"
   description: "Orthophoto"
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
@@ -421,7 +778,7 @@
   year: 2023
   coverage: "belgium"
 
-- name: "Ortho Summer (2023, WAL)"
+- name: "Orthophoto (2023, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2023_ETE/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -431,7 +788,7 @@
   year: 2023
   coverage: "wallonia"
 
-- name: "Ortho (2024, VL)"
+- name: "Orthophoto (2024, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb24vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "WMTS"
@@ -441,7 +798,7 @@
   year: 2024
   coverage: "flanders"
 
-- name: "Ortho Summer (2024, WAL)"
+- name: "Orthophoto (2024, wallonia)"
   description: "Orthophoto"
   url: "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_2024/MapServer/WMSServer?service=WMS&request=GetMap&version=1.1.1&layers=0&styles=&format=image%2Fpng&transparent=true&tiled=false&srs=EPSG:3857&bbox={bbox-epsg-3857}&width=256&height=256"
   urlType: "WMS"
@@ -451,7 +808,7 @@
   year: 2024
   coverage: "wallonia"
 
-- name: "Ortho (2025, VL)"
+- name: "Orthophoto (2025, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb25vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"
   urlType: "WMTS"
@@ -461,7 +818,7 @@
   year: 2025
   coverage: "flanders"
 
-- name: "Most recent aerial imagery (FL)"
+- name: "Orthophoto (2025, flanders)"
   description: "Orthophoto"
   url: "https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}"
   urlType: "WMTS"

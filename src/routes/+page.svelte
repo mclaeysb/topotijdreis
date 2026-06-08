@@ -1,17 +1,13 @@
 <script lang="ts">
-	import { mapContext } from '$lib/map-context';
-	import { page } from '$app/stores';
-	import { goto } from '$app/navigation';
-	import { browser } from '$app/environment';
-	import { PersistedState, Debounced } from 'runed';
-
+	import { PersistedState } from 'runed';
 	import Header from '$lib/components/Header.svelte';
 	import MapWithSlider from '$lib/components/MapWithSlider.svelte';
-	import type { Camera, Language, SortedLayer, Type } from '$lib/types/types';
+	import { MapUrlState } from '$lib/map-state.svelte';
+	import type { Camera, Language, SortedLayer } from '$lib/types/types';
 
 	let { data } = $props();
 
-	const map = mapContext.get();
+	const mapState = new MapUrlState();
 
 	const currentYear = new Date().getFullYear();
 
@@ -21,87 +17,15 @@
 			.map((layer) => ({ ...layer, year: layer.year ?? currentYear }))
 	);
 
-	// ── Defaults ────────────────────────────────────────────────────────────────
-	const DEFAULT_TYPES: Type[] = ['topo'];
-	const DEFAULT_YEAR: number = 1971;
-	const DEFAULT_LANGUAGE: Language = 'en';
+	const language = new PersistedState<Language>('language', 'en');
 
-	function parseTypes(raw: string | null): Type[] {
-		if (!raw) return DEFAULT_TYPES;
-		return raw.split(',') as Type[];
-	}
-
-	function getParams() {
-		return $page.url.searchParams;
-	}
-
-	// ── URL-backed state (shareable) ────────────────────────────────────────────
-	let yearA = $state(Number(getParams().get('a')) || DEFAULT_YEAR);
-	let yearB = $state(Number(getParams().get('b')) || DEFAULT_YEAR);
-	let compare = $state(getParams().get('compare') === 'true');
-	let selectedTypesA = $state<Type[]>(parseTypes(getParams().get('typesA')));
-	let selectedTypesB = $state<Type[]>(parseTypes(getParams().get('typesB')));
-
-	let camera = $state<Camera | null>(
-		getParams().get('lat')
-			? {
-					center: [Number(getParams().get('lng')), Number(getParams().get('lat'))],
-					zoom: Number(getParams().get('zoom')) || 8,
-					bearing: 0,
-					pitch: 0
-				}
-			: null
-	);
-
-	// Debounce camera so dragging doesn't flood history
-	const debouncedCamera = new Debounced(() => camera, 400);
-
-	$effect(() => {
-		const _a = yearA;
-		const _b = yearB;
-		const _cmp = compare;
-		const _typesA = selectedTypesA.join(',');
-		const _typesB = selectedTypesB.join(',');
-		const _cam = debouncedCamera.current;
-
-		if (!browser) return;
-
-		const p = new URLSearchParams();
-		p.set('a', String(_a));
-		p.set('typesA', _typesA);
-		if (_cmp) {
-			p.set('compare', 'true');
-			p.set('b', String(_b));
-			p.set('typesB', _typesB);
-		}
-		if (_cam) {
-			p.set('lat', _cam.center[1].toFixed(5));
-			p.set('lng', _cam.center[0].toFixed(5));
-			p.set('zoom', _cam.zoom.toFixed(2));
-		}
-
-		goto(`?${p.toString()}`, {
-			replaceState: true,
-			keepFocus: true,
-			noScroll: true
-		});
-	});
-
-	// ── PersistedState (preference state, not shareable) ────────────────────────
-	const language = new PersistedState<Language>('language', DEFAULT_LANGUAGE);
-
-	// ── Map sync ────────────────────────────────────────────────────────────────
 	let leaderId = $state<string | null>(null);
 	let userLocation = $state<[number, number] | undefined>(undefined);
 
 	function onCameraChange(id: string | null, newCamera: Camera) {
 		leaderId = id;
-		camera = newCamera;
+		mapState.camera = newCamera;
 	}
-
-	$effect(() => {
-		map.year = yearA;
-	});
 </script>
 
 <svelte:head>
@@ -111,40 +35,40 @@
 <div class="flex h-screen flex-col">
 	<Header
 		bind:userLocation
-		bind:compare
-		bind:camera
+		bind:compare={mapState.compare}
+		bind:camera={mapState.camera}
 		bind:leaderId
 		language={language.current}
 		text={data.text}
 	/>
 	<div
 		class="flex min-h-0 flex-1 flex-col overflow-hidden bg-border
-           {compare
-			? 'portrait:flex-col portrait:gap-y-0.5 landscape:flex-row landscape:gap-x-0.5'
+           {mapState.compare
+			? 'portrait:flex-col portrait:gap-y-0.5 landscape:flex-row landscape:gap-x-px'
 			: ''}"
 	>
 		<MapWithSlider
 			id="a"
 			{allLayers}
-			{camera}
+			camera={mapState.camera}
 			{leaderId}
 			{userLocation}
 			{onCameraChange}
-			compact={compare}
-			bind:selectedYear={yearA}
-			bind:selectedTypes={selectedTypesA}
+			compact={mapState.compare}
+			bind:selectedYear={mapState.year}
+			bind:selectedTypes={mapState.selectedTypes}
 		/>
-		{#if compare}
+		{#if mapState.compare}
 			<MapWithSlider
 				id="b"
 				{allLayers}
-				{camera}
+				camera={mapState.camera}
 				{leaderId}
 				{userLocation}
 				{onCameraChange}
-				compact={compare}
-				bind:selectedYear={yearB}
-				bind:selectedTypes={selectedTypesB}
+				compact={mapState.compare}
+				bind:selectedYear={mapState.year2}
+				bind:selectedTypes={mapState.selectedTypes2}
 			/>
 		{/if}
 	</div>

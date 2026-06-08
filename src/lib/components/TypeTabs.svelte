@@ -18,15 +18,11 @@
 </script>
 
 <Tabs.Root bind:value={selectedType} class="">
-	<Tabs.List class="border bg-accent-foreground p-1">
-		<Tabs.Trigger
-			value="topo"
-			class="text-accent data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"
+	<Tabs.List class="border bg-background py-1">
+		<Tabs.Trigger value="topo" class="text-accent-foreground data-[state=active]:bg-accent"
 			><Map /></Tabs.Trigger
 		>
-		<Tabs.Trigger
-			value="aerial"
-			class="text-accent data-[state=active]:bg-accent data-[state=active]:text-accent-foreground"
+		<Tabs.Trigger value="aerial" class="text-accent-foreground data-[state=active]:bg-accent"
 			><Camera /></Tabs.Trigger
 		>
 	</Tabs.List>

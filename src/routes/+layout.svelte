@@ -1,22 +1,17 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
-	import { mapContext } from '$lib/map-context';
+	import favicon from '$lib/assets/favicon.png';
 
 	let { children } = $props();
-
-	const map = $state({ year: 3000 });
-	mapContext.set(map);
-
-	const era = $derived(map.year >= 1873 && map.year < 1904 ? '1873' : undefined);
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet" />
+	<meta name="description" content="Explore historical maps and imagery in Belgium" />
+	<meta name="keywords" content="Belgium, map, historical, cartography" />
+	<meta name="author" content="Manuel Claeys Bouuaert" />
 </svelte:head>
 
-<div data-era={era}>
+<div>
 	{@render children()}
 </div>

@@ -19,11 +19,21 @@
 		latestYear: number;
 	} = $props();
 
-	const selectedYears = $derived(selectedLayers.map((layer) => layer.year));
+	let selectedYears = $derived(selectedLayers.map((layer) => layer.year));
+	// svelte-ignore state_referenced_locally
+	let invertedYear = $state(earliestYear + latestYear - selectedYear);
+
+	function invertedYearToSelectedYear(invertedYear: number) {
+		return earliestYear + latestYear - invertedYear;
+	}
+
+	$effect(() => {
+		selectedYear = invertedYearToSelectedYear(invertedYear);
+	});
 </script>
 
 <div class="flex h-full w-full flex-col">
-	<div class="z-20 flex justify-center py-2 md:border-r-1 md:bg-sidebar">
+	<div class="z-20 flex justify-center py-2 md:border-r md:bg-sidebar">
 		<div class="-ml-0.5">
 			<TypeTabs bind:selectedTypes />
 		</div>
@@ -32,7 +42,7 @@
 	<div class="relative flex-1">
 		<Slider.Root
 			type="single"
-			bind:value={selectedYear}
+			bind:value={invertedYear}
 			min={earliestYear}
 			max={latestYear}
 			step={1}
@@ -49,9 +59,8 @@
 
 				<Slider.Thumb
 					index={0}
-					class="border-grey-700 justify left-0 z-20 flex h-9	 w-24 cursor-pointer items-center rounded-r-sm border border-l-0 bg-primary shadow-md focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+					class="border-grey-700 justify left-0 z-20 flex h-9 w-24 cursor-pointer items-center rounded-r-sm border border-l-0 bg-primary shadow-md focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
 				>
-					<!-- hover:scale-110 -->
 					<span class="ml-4 flex items-center text-xl font-bold text-sidebar">
 						{selectedYear}
 						<ChevronsUpDown class="ml-1" size={16} />
@@ -59,35 +68,35 @@
 				</Slider.Thumb>
 
 				{#each tickItems as { index, value } (index)}
-					{#if value % 5 === 0}
+					{#if invertedYearToSelectedYear(value) % 5 === 0}
 						<Slider.Tick
 							{index}
 							class="z-10 ml-2 hidden h-0.5 w-1 bg-muted-foreground transition md:flex"
 						/>
 					{/if}
-					{#if value % 25 === 0 || value === earliestYear}
+					{#if invertedYearToSelectedYear(value) % 25 === 0 || value === latestYear}
 						<Slider.TickLabel
 							{index}
 							position="right"
 							class="z-5 -ml-14 hidden text-xs leading-none font-medium text-sidebar-foreground transition md:flex"
 						>
-							{value}
+							{invertedYearToSelectedYear(value)}
 						</Slider.TickLabel>
 					{/if}
 				{/each}
+
 				{#each tickItems as { index, value } (index)}
-					{#if selectedYears.includes(value)}
+					{#if selectedYears.includes(invertedYearToSelectedYear(value))}
+						<!-- <Slider.Tick
+							{index}
+							class="-left-0.5 z-10 ml-2 hidden h-2 w-2 rounded-2xl bg-primary/30 transition md:flex"
+						/> -->
 						<Slider.Tick
 							{index}
-							class="-left-0.5 z-10 ml-2 hidden h-2 w-2 rounded-2xl bg-primary transition md:flex"
+							class="-left-2 z-10 ml-2 hidden h-1 w-22 bg-muted-foreground/10 transition md:flex"
 						/>
 					{/if}
 				{/each}
-				<!-- {#each tickItems as { index, value } (index)}
-				{#if selectedYears.includes(value)}
-				<Slider.Tick {index} class="z-10 ml-2 h-1 w-1 rounded-2xl bg-sidebar-foreground" />
-				{/if}
-				{/each} -->
 			{/snippet}
 		</Slider.Root>
 	</div>

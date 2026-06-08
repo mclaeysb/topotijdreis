@@ -23,14 +23,30 @@
 	} = $props();
 
 	let container: HTMLElement;
-	let map: maplibregl.Map; // TODO: make readable?
+	let map: maplibregl.Map;
 	let mapStyleLoaded = $state(false);
-	let syncEnabled = $state(false); // ← key addition
+	let syncEnabled = $state(false);
+
+	function getLocationGeoJSON(coords: [number, number]): GeoJSON.FeatureCollection {
+		return {
+			type: 'FeatureCollection',
+			features: [
+				{
+					type: 'Feature',
+					geometry: { type: 'Point', coordinates: coords },
+					properties: {}
+				}
+			]
+		};
+	}
+
+	function emptyGeoJSON(): GeoJSON.FeatureCollection {
+		return { type: 'FeatureCollection', features: [] };
+	}
 
 	onMount(() => {
 		map = new maplibregl.Map({
 			container,
-			// style: 'https://tiles.openfreemap.org/styles/liberty',
 			style: {
 				version: 8,
 				sources: Object.fromEntries(
@@ -39,17 +55,15 @@
 						{ type: 'raster', tiles: [layer.url], tileSize: 256 }
 					])
 				),
-				layers: allLayers.map((layer) => {
-					return {
-						id: layer.name,
-						type: 'raster',
-						source: layer.name,
-						tileSize: 256,
-						layout: {
-							visibility: visibleLayerNames.includes(layer.name) ? 'visible' : 'none'
-						}
-					};
-				})
+				layers: allLayers.map((layer) => ({
+					id: layer.name,
+					type: 'raster',
+					source: layer.name,
+					tileSize: 256,
+					layout: {
+						visibility: visibleLayerNames.includes(layer.name) ? 'visible' : 'none'
+					}
+				}))
 			},
 			bounds: new maplibregl.LngLatBounds([
 				[2.4917151948012304, 51.574107450095224],
@@ -61,14 +75,49 @@
 			attributionControl: false
 		});
 
+		map.setMinZoom(map.getZoom());
 		map.dragRotate.disable();
 		map.touchZoomRotate.disableRotation();
 
 		map.on('style.load', () => {
+			map.addSource('user-location-source', {
+				type: 'geojson',
+				data: emptyGeoJSON()
+			});
+
+			// White halo / outer ring
+			map.addLayer({
+				id: 'user-location-outer',
+				type: 'circle',
+				source: 'user-location-source',
+				paint: {
+					'circle-radius': 10,
+					'circle-color': '#ffffff',
+					'circle-opacity': 1,
+					'circle-stroke-width': 2,
+					'circle-stroke-color': '#2979ff',
+					'circle-stroke-opacity': 0.5
+				}
+			});
+
+			// Blue filled inner dot
+			map.addLayer({
+				id: 'user-location-inner',
+				type: 'circle',
+				source: 'user-location-source',
+				paint: {
+					'circle-radius': 7,
+					'circle-color': '#2979ff',
+					'circle-opacity': 1,
+					'circle-stroke-width': 2,
+					'circle-stroke-color': '#ffffff',
+					'circle-stroke-opacity': 1
+				}
+			});
+
 			mapStyleLoaded = true;
 		});
 
-		// Only register move listener after the map is fully idle
 		map.once('idle', () => {
 			syncEnabled = true;
 
@@ -87,7 +136,6 @@
 			if (map) map.remove();
 		});
 
-		// Ensure correct sizing if layout changes or initial size wasn't computed yet
 		requestAnimationFrame(() => map.resize());
 	});
 
@@ -115,9 +163,18 @@
 	});
 
 	$effect(() => {
-		if (!map || !userLocation) return;
-		map.flyTo({ center: userLocation, zoom: 14 });
+		if (!mapStyleLoaded) return;
+
+		const source = map.getSource('user-location-source') as maplibregl.GeoJSONSource | undefined;
+		if (!source) return;
+
+		if (userLocation) {
+			source.setData(getLocationGeoJSON(userLocation));
+			map.flyTo({ center: userLocation, zoom: 14 });
+		} else {
+			source.setData(emptyGeoJSON());
+		}
 	});
 </script>
 
-<div class=" h-full w-full bg-white" bind:this={container}></div>
+<div class="h-full w-full bg-white" bind:this={container}></div>
