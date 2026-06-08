@@ -26,23 +26,23 @@ export class MapUrlState {
 	#debouncedCamera = new Debounced(() => this.camera, 400);
 
 	constructor() {
-		const params = getParams();
-		this.year = Number(params.get('year')) || DEFAULT_YEAR;
-		this.year2 = Number(params.get('year2')) || DEFAULT_YEAR;
-		this.compare = params.get('compare') === 'true';
-		this.selectedTypes = parseTypes(params.get('types'));
-		this.selectedTypes2 = parseTypes(params.get('types2'));
+		if (browser) {
+			const params = getParams();
+			this.year = Number(params.get('year')) || DEFAULT_YEAR;
+			this.year2 = Number(params.get('year2')) || DEFAULT_YEAR;
+			this.compare = params.get('compare') === 'true';
+			this.selectedTypes = parseTypes(params.get('types'));
+			this.selectedTypes2 = parseTypes(params.get('types2'));
 
-		if (params.get('lat')) {
-			this.camera = {
-				center: [Number(params.get('lng')), Number(params.get('lat'))],
-				zoom: Number(params.get('zoom')) || 8,
-				bearing: 0,
-				pitch: 0
-			};
+			if (params.get('lat')) {
+				this.camera = {
+					center: [Number(params.get('lng')), Number(params.get('lat'))],
+					zoom: Number(params.get('zoom')) || 8,
+					bearing: 0,
+					pitch: 0
+				};
+			}
 		}
-
-		// Setup the sync effect
 		$effect(() => {
 			if (!browser) return;
 

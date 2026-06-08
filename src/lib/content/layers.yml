@@ -556,7 +556,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2016/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
-  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
+  moreInfo: "https://www.geo.be/catalog/details/29238f19-ac79-4a4a-a797-5490226381ec?l=en"
   type: "aerial"
   year: 2016
   coverage: "belgium"
@@ -587,7 +587,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2017/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
-  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
+  moreInfo: "https://www.geo.be/catalog/details/29238f19-ac79-4a4a-a797-5490226381ec?l=en"
   type: "aerial"
   year: 2017
   coverage: "belgium"
@@ -638,7 +638,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2019/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
-  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
+  moreInfo: "https://www.geo.be/catalog/details/29238f19-ac79-4a4a-a797-5490226381ec?l=en"
   type: "aerial"
   year: 2019
   coverage: "belgium"
@@ -669,7 +669,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2020/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
-  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
+  moreInfo: "https://www.geo.be/catalog/details/29238f19-ac79-4a4a-a797-5490226381ec?l=en"
   type: "aerial"
   year: 2020
   coverage: "belgium"
@@ -700,7 +700,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2021/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
-  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
+  moreInfo: "https://www.geo.be/catalog/details/29238f19-ac79-4a4a-a797-5490226381ec?l=en"
   type: "aerial"
   year: 2021
   coverage: "belgium"
@@ -731,7 +731,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage_2022/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
-  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
+  moreInfo: "https://www.geo.be/catalog/details/29238f19-ac79-4a4a-a797-5490226381ec?l=en"
   type: "aerial"
   year: 2022
   coverage: "belgium"
@@ -773,7 +773,7 @@
   url: "https://wmts.ngi.be/inspire/ortho/1.0.0/orthoimage_coverage/default/3857/latest/{z}/{y}/{x}.png"
   urlType: "WMTS"
   attribution: '<a href="http://www.ngi.be/">NGI</a>'
-  moreInfo: "https://shop.ngi.be/nl/luchtfotos/"
+  moreInfo: "https://www.geo.be/catalog/details/29238f19-ac79-4a4a-a797-5490226381ec?l=en"
   type: "aerial"
   year: 2023
   coverage: "belgium"
